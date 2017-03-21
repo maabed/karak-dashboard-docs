@@ -2,10 +2,9 @@
 title: API Reference
 
 language_tabs:
-  - shell
-  - ruby
-  - python
+  - HTML
   - javascript
+  - CSS
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -29,29 +28,24 @@ This example API documentation page was created with [Slate](https://github.com/
 
 > To authorize, use this code:
 
-```ruby
+```HTML
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 ```
 
-```python
+```javascript
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
 ```
 
-```shell
+```CSS
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
   -H "Authorization: meowmeowmeow"
 ```
 
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
@@ -69,31 +63,25 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 ## Get All Kittens
 
-```ruby
+```HTML
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.kittens.get
 ```
 
-```python
+```javascript
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
 api.kittens.get()
 ```
 
-```shell
+```CSS
 curl "http://example.com/api/kittens"
   -H "Authorization: meowmeowmeow"
 ```
 
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
 
 > The above command returns JSON structured like this:
 
@@ -135,31 +123,25 @@ Remember — a happy kitten is an authenticated kitten!
 
 ## Get a Specific Kitten
 
-```ruby
+```HTML
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.kittens.get(2)
 ```
 
-```python
+```javascript
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
 api.kittens.get(2)
 ```
 
-```shell
+```CSS
 curl "http://example.com/api/kittens/2"
   -H "Authorization: meowmeowmeow"
 ```
 
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
 
 > The above command returns JSON structured like this:
 
