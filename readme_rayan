@@ -1,0 +1,377 @@
+# Getting Started
+
+Welcome to Blue Dashboard! You can use our dashboard to use multiple features and pages in your website, all you have to do is to <a href="https://github.com/new-release/Blue-dashboard">download our dashboard or fork it from github</a>.
+
+
+
+
+////////////////
+
+# Forms
+
+Our Forms utility provides a variety of customized forms elements such as input fields, check boxes, date pickers, etc.
+
+## Input Fields
+
+Blue Dashboard provide a collection of input fields such that you can easily use in your website.
+
+All you need to do is to include Blue Dashboard customized CSS file in addition to <a href="http://materializecss.com/">materializecss</a> framework JS file.
+
+`<link type="text/css" href="assets/css/styles.css" />`<br>
+`<script type="text/javascript" src="materialize.min.js"></script>`
+
+> To use our customized input fields:
+
+```HTML
+Basic input field:
+
+<div class="input-field">
+    <input id="full_name" name="full_name" type="text" class="validate">
+    <label for="full_name">Full Name*</label>
+</div>
+
+Input field with icon:
+
+<div class="input-field">
+    <i class="material-icons prefix">
+        <i class="fa fa-user" aria-hidden="true"></i>
+    </i>
+    <input id="user_prefix" name="email" type="text" class="validate user_prefix">
+    <label for="user_prefix" class="user_prefix">Username</label>
+</div>
+```
+## Ranges
+
+In order to use the Ranges slider you will have to include two CSS files the first one defines the basic look for the slider and the second one for the theme you chose and the JS file for the library.
+
+`<link type="text/css" href="ion.rangeSlider.css">`<br>
+`<link type="text/css" href="ion.rangeSlider.skinNice.css">`<br>
+`<script type="text/javascript" src="ion.rangeSlider.min.js"></script>`
+
+<aside class="notice">
+Don't forget to initialize the range in the javascript 
+</aside>
+> To use our ranges:
+
+```HTML
+<input type="text" id="no-params" name="example_name" value="" />
+```
+
+```javascript
+$('#no-params').ionRangeSlider();
+```
+##Toggles
+
+If you wanted to use the slide toggles all you need to do is include Blue Dashboard styles file. <br>
+`<link type="text/css" href="assets/css/styles.css" />`<br>
+
+You can also change the color of the toggle by using one of the colors classes such as: <br>
+<code>.ch-toggle-green</code> <br>
+<code>.ch-toggle-red</code> 
+> To use slide toggle:
+
+```HTML
+<div class="toggleswitch">
+    <input id="toggle-checked" class="ch-toggle ch-toggle-green" type="checkbox">
+    <label for="toggle-checked"></label>
+</div>
+```
+## Dropdown Select
+
+The dropdown selects are a very common input tool so in order to use them you should include the link for the Select2 library CSS file and JS file.
+
+`<link type="text/css" href="select2.min.css">` <br>
+`<script type="text/javascript" src="select2.min.js"></script>`<br>
+
+The dropdown select includes variety of features such as: <br>
+<code>.select2-init-single</code> <br>
+<code>.select2-init-multiple</code> <br>
+<code>.select2-init-images</code>
+<aside class="notice">
+Don't forget to initialize the select dropdown in the javascript 
+</aside>
+> To use select dropdown:
+
+```HTML
+<select class="select-display select2-init-single selectpicker">
+    <option value="Oklahoma">Oklahoma</option>
+    <option value="Newyork">New york</option>
+    <option value="California">California</option>
+    <option value="Texas">Texas</option>
+    <option value="Florida">Florida</option>
+</select>
+```
+```javascript
+$('.select2-init-single').select2();
+$('.select2-init-multiple').select2();
+$('.select2-init-images').select2({
+  templateResult: formatState
+});
+```
+
+## Checkboxes
+
+In Blue Dashboard you can find many checkboxes styles such as colored checkboxes, circled checkboxes and yes/no checkboxes.
+
+
+In order to use the colored checkboxes all you need to do is to include Blue Dashboard styles file.<br>
+
+`<link type="text/css" href="assets/css/styles.css" />`<br>
+
+As for the yes/no checkboxes you need to include a JS file for the <a href="https://vsn4ik.github.io/bootstrap-checkbox/">Bootstrap checkbox</a> library. <br>
+
+`<script type="text/javascript" src="bootstrap-checkbox.min.js"></script>`
+
+<aside class="notice">
+Don't forget to initialize the yes/no checkbox in the javascript 
+</aside>
+> To use checkboxes:
+
+```HTML
+<!--  Colored checkboxes: -->
+
+<div class="checkbox">
+    <input id="checkbox1" type="checkbox" checked>
+    <label class="fontsize" for="checkbox1"> A simple checkbox </label>
+</div>
+
+<!-- Circle checkboxes: -->
+
+<div class="checkbox checkbox-circle">
+    <input id="checkbox-circle-default" type="checkbox">
+    <label for="checkbox-circle-default">Default</label>
+</div>
+```
+```javascript
+$('#toggleCheckbox-yes-green').checkboxpicker();
+```
+
+## Datepickers
+Blue Dashboard provides many datepickers styles including range datepickers, simple datepickers and advanced datepickers.
+
+In order to use range datepickers you need to include: <br>
+
+`<link type="text/css" href="/daterangepicker.css" />` <br>
+`<script type="text/javascript" src="daterangepicker.js"></script>`
+
+In addition to datepickers you can use clockpicker by including: <br>
+
+`<link type="text/css" href="bootstrap-clockpicker.min.css">` <br>
+`<script type="text/javascript" src="bootstrap-clockpicker.min.js"></script>` <br>
+
+You can also use the advanced datepicker by including:<br>
+
+`<link type="text/css" href="datepicker.min.css">`<br>
+`<script type="text/javascript" src="datepicker.min.js"></script>`<br>
+`<script type="text/javascript" src="datepicker.en.js"></script>`
+
+<aside class="notice">
+Don't forget to initialize the range datepickers in the javascript 
+</aside>
+> To use datepickers:
+
+```HTML
+<!-- Range Datepicker: -->
+
+<input type="text" name="daterange" class="form-control simple" value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM" />
+
+<!-- Predefined Ranges: -->
+
+<div id="reportrange" class="simple data-range">
+    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+    <span></span> <b class="caret"></b>
+</div>
+
+<!-- Simple datepicker: -->
+
+<input type="text" name="birthdate" class="form-control simple" value="10/24/1984" />
+
+<!-- Clockpicer: -->
+
+<div class="input-group clockpicker simple" data-placement="right" data-align="top" data-autoclose="true">
+  <input type="text" class="form-control" value="13:14">
+  <span class="input-group-addon">
+    <span class="glyphicon glyphicon-time"></span>
+  </span>
+</div>
+
+<!-- Advanced datepicker: -->
+
+<div class="datepicker-here simple" data-language='en'></div>
+```
+
+```javascript
+// Range Datepicker:
+
+$('input[name="daterange"]').daterangepicker({
+  timePicker: true,
+  timePickerIncrement: 30,
+  locale: {
+    format: 'MM/DD/YYYY h:mm A'
+  }
+});
+
+// Predefined ranges:
+
+$('#reportrange').daterangepicker({
+  startDate: start,
+  endDate: end,
+  ranges: {
+    'Today': [moment(), moment()],
+    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+    'This Month': [moment().startOf('month'), moment().endOf('month')],
+    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+  }
+}, cb);
+
+// Simple datepicker:
+
+$('input[name="birthdate"]').daterangepicker({
+  singleDatePicker: true,
+  showDropdowns: false
+});
+
+// Clockpicker
+
+$('.clockpicker').clockpicker();
+
+// Advanced datepicker
+$('.datepicker-here').datepicker();
+
+```
+## Tag Inputs
+
+You can use Tag Inputs to insert tags into input fields and here is the way to do that.
+
+Include those two files into your code: <br>
+
+`<link type="text/css" href="bootstrap-tagsinput.css">` <br>
+`<script type="text/javascript" src="bootstrap-tagsinput.js"></script>`
+
+<aside class="notice">
+The objects tags amd the categorized tags needs to be initialized in javascript and the the values added to them there.
+</aside>
+> To use the tags inputs:
+
+```HTML
+<!-- Markup -->
+
+<input type="text" value="Amsterdam,Washington" data-role="tagsinput" />
+
+<!-- True multi value -->
+
+<select multiple data-role="tagsinput">
+    <option value="Amsterdam">Amsterdam</option>
+    <option value="Washington">Washington</option>
+</select>
+
+<!-- Objects as tags -->
+                                    
+<input class="objects-as-tags" type="text" />
+
+
+<!-- Categorizing tags -->
+
+<input class="colored-tags" type="text" />
+
+```
+
+```javascript
+// Objects as tags
+
+var typeaheadTags = $('.objects-as-tags');
+typeaheadTags.tagsinput({
+  itemValue: 'value',
+  itemText: 'text',
+  typeaheadjs: {
+    name: 'cities',
+    displayKey: 'text',
+    source: cities.ttAdapter()
+  }
+});
+
+typeaheadTags.tagsinput('add', {
+  'value': 1,
+  'text': 'Amsterdam',
+  'continent': 'Europe'
+});
+
+//Categorizing tags
+
+var typeaheadColored = $('.colored-tags');
+typeaheadColored.tagsinput({
+  tagClass: function(item) {
+    switch (item.continent) {
+      case 'Europe':
+        return 'label label-primary';
+      case 'America':
+        return 'label label-danger label-important';
+      case 'Australia':
+        return 'label label-success';
+      case 'Africa':
+        return 'label label-default';
+      case 'Asia':
+        return 'label label-warning';
+    }
+  },
+  itemValue: 'value',
+  itemText: 'text',
+  typeaheadjs: {
+    name: 'cities',
+    displayKey: 'text',
+    source: cities.ttAdapter()
+  }
+});
+typeaheadColored.tagsinput('add', {
+  'value': 1,
+  'text': 'Amsterdam',
+  'continent': 'Europe'
+});
+typeaheadColored.tagsinput('add', {
+  'value': 4,
+  'text': 'Washington',
+  'continent': 'America'
+});
+```
+
+## Drag N' Drop
+
+If you want to add an upload field we have just the solution for you with the Drag N' Drop input.
+
+You can use this feature by including:<br>
+
+`<link type="text/css" rel="stylesheet" href="dropzone.css">`<br>
+`<script type="text/javascript" src="dropzone.js"></script>`
+
+> To use the drop zone:
+
+```HTML
+<div class="dropzone-min">
+    <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
+</div>
+```
+
+## Text Editor
+
+In order to use the customized text editor you will have to include: <br>
+
+`<link type="text/css" rel="stylesheet" href="assets/css/text-editor.css">` <br>
+`<link href="assets/vendors/summernote/summernote.css" rel="stylesheet">` <br>
+`<script type="text/javascript" src="assets/vendors/summernote/summernote.js"></script>`
+
+> To use the text editor:
+
+```HTML
+
+<div id="summernote">hello </div>
+
+```
+
+```javascript
+$('#summernote').summernote({
+  height: 200
+});
+
+```
