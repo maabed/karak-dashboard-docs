@@ -16,114 +16,68 @@ includes:
 search: true
 ---
 
-# Loading
+# Cards
 
-Loaders could be used in many places but two main functionalities are that they are used when the process the user is waiting for is determinate or indeterminate.
+<a href="http://materializecss.com/cards.html">Cards</a> are a utility extracted from  <a href="http://materializecss.com/">Materialize framework </a>to display information in a new way.
 
-* Progress bars and circles are used in determinate operations.
+You can use blue dashboard customized cards by including the blue dashboard style file in addition to thematerialize css JS file and use the cards as shown in th example.
 
-* Loaders are used in indeterminate operations.
 
-* Progress circles. 
-  - These progress shapes were extracted from the <a href="https://kimmobrunfeldt.github.io/progressbar.js/">PROGRESS BAR.JS</a> 
-  - In order to use them you need to include ProgressBar.js Javascript file. <br>
-  - You can manipulate and play with the progress circle options as you like using the option provided by the library.
-
-* Progress bars.
-  - Same as the Progress circles above you should include the include ProgressBar.js Javascript file.
-
-* Placeholder loader.
-  - This famous loader is used as stand alone plugin meaning that it doesn't need any libraries, all you need to do is to include the blue dashboard Style file and use it just like the example does.
-
-* Indeterminate loaders.
-  - To use any of the indeterminate loaders all you need to do is to include the dashboard style file as before and do as the example shows.
-
-<aside class="notice">
-Please note that in blue dashboard the loaders are displayed and hidden using Jquery.
-</aside>
 
 ```HTML
+<!-- Materialize JS -->
 
-<!-- Progress bar.js library -->
+<script type="text/javascript" src="assets/vendors/materialize/materialize.min.js"></script>
 
-<script type="text/javascript" src="progressbar.min.js"></script>
+<!-- Basic cards -->
 
-<!-- Progress bar-circle container -->
-
-<div id="container"> </div>
-
-
-<!-- Placeholder loader -->
-
-<div class="timeline-item">
-    <div class="animated-background facebook">
-        <div class="background-masker header-top"></div>
-        <div class="background-masker header-left"></div>
-        <div class="background-masker header-right"></div>
-        <div class="background-masker header-bottom"></div>
-        <div class="background-masker subheader-left"></div>
-        <div class="background-masker subheader-right"></div>
-        <div class="background-masker subheader-bottom"></div>
-        <div class="background-masker content-top"></div>
-        <div class="background-masker content-first-end"></div>
-        <div class="background-masker content-second-line"></div>
-        <div class="background-masker content-second-end"></div>
-        <div class="background-masker content-third-line"></div>
-        <div class="background-masker content-third-end"></div>
+<div class="card info-mid">
+    <div class="card-content white-text">
+        <span class="card-title">Card Title</span>
+        <p>
+        I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+        </p>
+    </div>
+    <div class="card-action">
+        <a href="#" class="default-dahsboard-link">This is a link</a>
+        <a href="#" class="default-dahsboard-link">This is a link</a>
     </div>
 </div>
 
-<!-- Indeterminate circle loader -->
+<!-- Horizontal Card -->
 
-<div class="loader1">
-    <svg class="circular" viewBox="25 25 50 50">
-        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
-    </svg>
+<div class="card horizontal">
+    <div class="card-image">
+        <img alt="card title" src="assets/images/card_03.jpg">
+    </div>
+    <div class="card-stacked">
+        <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.</p>
+        </div>
+        <div class="card-action">
+            <button type="button" class="btn btn-link">This is a link<button>
+        </div>
+    </div>
 </div>
+<!-- Card reveal -->
 
-<!-- Indeterminate bar loader -->
-
-<div class="loader"></div>
-
-<!-- Indeterminate cube loader -->
-<div id="loader" class="vertical--center">
-    <div class="vertical-center__element">
-        <span class="preloader preloader--top"></span>
-        <span class="preloader preloader--bottom"></span>
+<div class="card">
+    <div class="card-image">
+        <img alt="card title" class="activator" src="assets/images/card_02.jpg">
+    </div>
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+        <p>I am a very simple card.</p>
+    </div>
+    <div class="card-action">
+        <button type="button" class="btn btn-link">This is a link</button>
+    </div>
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
     </div>
 </div>
 
-```
-
-```javascript
-
-// Progress circle initialization 
-
-var bar = new ProgressBar.Circle(container, {
-  strokeWidth: 6,
-  easing: 'easeInOut',
-  duration: 1400,
-  color: '#FFEA82',
-  trailColor: '#eee',
-  trailWidth: 1,
-  svgStyle: null
-});
-
-bar.animate(1.0);
-
-// Progress bar initialization 
-
-var bar = new ProgressBar.Line(container, {
-  strokeWidth: 4,
-  easing: 'easeInOut',
-  duration: 1400,
-  color: '#FFEA82',
-  trailColor: '#eee',
-  trailWidth: 1,
-  svgStyle: {width: '100%', height: '100%'}
-});
-
-bar.animate(1.0);
 ```
 
 # Authentication
