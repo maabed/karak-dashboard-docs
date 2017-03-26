@@ -513,3 +513,58 @@ The modal we use are extracted from <a href="https://v4-alpha.getbootstrap.com/c
 </div>
 
 ```
+/////////////////////////// Buttons
+# Buttons
+
+In Blue dashboard we used the same <a href="http://getbootstrap.com/css/#buttons">buttons in bootstrap</a> in addition to our own touch.
+
+* If you wanted to use the Blue dashboard buttons all you need to do is :
+   - Include the Blue dashboard style file.
+   - Use the customized classes as shown in the example.
+
+* Please note that if you wanted to use the buttons with hover you need to include the 
+<a href="http://ianlunn.github.io/Hover/">Hover.css</a> library.
+
+```HTML
+<!-- Dashboard Buttons -->
+
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-default btn-block">Block Button</button>
+
+<!-- Icon Buttons -->
+
+<button type="button" class="btn btn-info icon-btn">
+    <span class="glyphicon glyphicon-search"></span> Search
+</button>
+
+<!-- Icon Buttons -->
+
+<button type="button" class="btn outline-primary">Primary</button>
+
+<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Button
+    <span class="caret"></span>
+</button>
+<ul class="dropdown-menu">
+    <li><a>First Option</a></li>
+    <li><a>Second Option</a></li>
+    <li><a>Third Option</a></li>
+</ul>
+
+<!-- Grouped Buttons -->
+
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">First Button</button>
+    <button type="button" class="btn btn-primary">Second Button</button>
+    <button type="button" class="btn btn-primary">Third Button</button>
+</div>
+
+<!-- Buttons With Hover -->
+
+<button type="button" class="btn btn-success hvr-float">Success</button>
+
+```
