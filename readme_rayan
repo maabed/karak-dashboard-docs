@@ -4,8 +4,7 @@ Welcome to Blue Dashboard! You can use our dashboard to use multiple features an
 
 
 
-
-////////////////
+//////////////// Forms
 
 # Forms
 
@@ -42,7 +41,7 @@ Input field with icon:
 ```
 ## Ranges
 
-In order to use the Ranges slider you will have to include two CSS files the first one defines the basic look for the slider and the second one for the theme you chose and the JS file for the library.
+In order to use the Ranges slider you will have to include two CSS files the first one defines the basic look for the slider and the second one for the theme you choose and the JS file for the library.
 
 `<link type="text/css" href="ion.rangeSlider.css">`<br>
 `<link type="text/css" href="ion.rangeSlider.skinNice.css">`<br>
@@ -373,5 +372,144 @@ In order to use the customized text editor you will have to include: <br>
 $('#summernote').summernote({
   height: 200
 });
+
+```
+
+/////////////////////////////// Notifications
+
+# UI Elements
+
+UI Elements are a very important utility to use in your website and they are very useful and give a very nice addition to any website.
+
+In Blue Dashboard we gathered a set of elements that you will find useful and very easy to use.
+
+## Notifications
+
+You can use Blue Dashboard notifications in your website very easily all you have to do is include the blue dashboard styles file and :
+
+-Choose which of the listed libraries you wish to use. <br>
+
+1- Bootstrap alert. <br>
+2- Sweet alert. <br>
+3- Toastr alert.
+
+-Include their files. <br>
+
+1- Bootstrap alert. <br>
+ - `<link type="text/css" href="bootstrap.min.css">`
+
+ * Use the .alert class to initialize the bootstrap alert in addition to the color classes such as :
+  - `.alert-success` & `.success-lighter`.
+
+2- Sweet alert <br>
+  - `<link type="text/css" href="sweetalert.css">` <br>
+  - `<script type="text/javascript" src="sweetalert.min.js"></script>`
+
+ * Initialize the sweet alert in the JS using `swal("Message")` function which can include many options. such as :
+  - `type: 'warning'`, to determine the type of the alert.
+
+
+3- Toastr alert. <br>
+ - `<link type="text/css" href="toastr.css" />` <br>
+ - `<script type="text/javascript" src="toastr.js"></script>`
+
+ * Initialize toastr alert in the JS using `toastr['info']('Bottom Right!');` . You will have to pass the type of the alert in the function as shown before and give it a text to display, you can also control the position of the alert using it's options just by adding :
+  - `toastr.options = {'positionClass': 'toast-bottom-center'}`;
+
+```HTML
+<!-- Bootstrap success alert -->
+
+<div class="alert alert-success success-lighter">
+    <strong>Success!</strong> Indicates a successful or positive action.
+</div>
+```
+
+```javascript
+
+// Sweet alert
+
+swal("Here's a message!")
+
+// Toastr alert
+
+toastr.options = {
+    'positionClass': 'toast-bottom-right',
+    'onclick': null,
+    'showDuration': '300',
+    'hideDuration': '1000',
+    'timeOut': '5000',
+    'showMethod': 'fadeIn',
+    'hideMethod': 'fadeOut'
+};
+
+toastr['info']('Bottom Right!');
+```
+/////////////////////////////// Modals
+
+
+# Modals
+
+The modal we use are extracted from <a href="https://v4-alpha.getbootstrap.com/components/modal/"> bootstrap framework modals </a> with a little bit of customizing on them.
+
+* All you have to do is :
+ - Include the blue dashboard style file and initialize the modal in the HTML file.
+ - Use the Blue dashboard customization classes such as `.right` to use the right side modal.
+
+* Some modals don't require customization classes such as the flat modal as shown in the example.
+
+* You can open and close the modal in two ways:
+ - Using the `data-toggle="modal"` & `data-target="#flat-modal"` attributes.
+ - Using `modal( )` method.
+ 
+```HTML
+<!-- Right side modal -->
+
+<!-- Open modal -->
+<button id="modal-open" data-toggle="modal" data-toggle="modal" data-target="#right-side-modal">Open</button>
+
+<!-- Modal -->
+<div class="modal right fade" id="right-side-modal" tabindex="-1" role="dialog" aria-labelledby="right-side-modal-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="right-side-modal-label">Right Sidebar</h4>
+            </div>
+            <div class="modal-body custome-margin">
+                <p class="right-modal-content"></p>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-info center-block right-button">Action</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary center-block right-button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+</div>
+
+<!-- Flat modal -->
+
+<!-- Open modal --> 
+<button id="flat-modal" data-toggle="modal" data-target="#flat-modal">Open</button>
+
+<!-- Modal --> 
+<div class="modal fade" id="flat-modal" tabindex="-1" role="dialog" aria-labelledby="flat-modal-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-body">
+            <div class="jumbotron">
+                <input type="text" placeholder="Type anywhere to search" class="form-control flat_email">
+                <i class="fa fa-search glyphicon glyphicon-search" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
 ```
