@@ -16,69 +16,13 @@ includes:
 search: true
 ---
 
-# Cards
+# Introduction
 
-<a href="http://materializecss.com/cards.html">Cards</a> are a utility extracted from  <a href="http://materializecss.com/">Materialize framework </a>to display information in a new way.
+Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
 
-You can use blue dashboard customized cards by including the blue dashboard style file in addition to thematerialize css JS file and use the cards as shown in th example.
+We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-
-
-```HTML
-<!-- Materialize JS -->
-
-<script type="text/javascript" src="assets/vendors/materialize/materialize.min.js"></script>
-
-<!-- Basic cards -->
-
-<div class="card info-mid">
-    <div class="card-content white-text">
-        <span class="card-title">Card Title</span>
-        <p>
-        I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-        </p>
-    </div>
-    <div class="card-action">
-        <a href="#" class="default-dahsboard-link">This is a link</a>
-        <a href="#" class="default-dahsboard-link">This is a link</a>
-    </div>
-</div>
-
-<!-- Horizontal Card -->
-
-<div class="card horizontal">
-    <div class="card-image">
-        <img alt="card title" src="assets/images/card_03.jpg">
-    </div>
-    <div class="card-stacked">
-        <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.</p>
-        </div>
-        <div class="card-action">
-            <button type="button" class="btn btn-link">This is a link<button>
-        </div>
-    </div>
-</div>
-<!-- Card reveal -->
-
-<div class="card">
-    <div class="card-image">
-        <img alt="card title" class="activator" src="assets/images/card_02.jpg">
-    </div>
-    <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-        <p>I am a very simple card.</p>
-    </div>
-    <div class="card-action">
-        <button type="button" class="btn btn-link">This is a link</button>
-    </div>
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
-</div>
-
-```
+This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
 # Authentication
 

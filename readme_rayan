@@ -680,4 +680,165 @@ var bar = new ProgressBar.Line(container, {
 });
 
 bar.animate(1.0);
+
+////////////////////////////// Cards
+
+# Cards
+
+<a href="http://materializecss.com/cards.html">Cards</a> are a utility extracted from  <a href="http://materializecss.com/">Materialize framework </a>to display information in a new way.
+
+You can use blue dashboard customized cards by including the blue dashboard style file in addition to thematerialize css JS file and use the cards as shown in th example.
+
+
+
+```HTML
+<!-- Materialize JS -->
+
+<script type="text/javascript" src="assets/vendors/materialize/materialize.min.js"></script>
+
+<!-- Basic cards -->
+
+<div class="card info-mid">
+    <div class="card-content white-text">
+        <span class="card-title">Card Title</span>
+        <p>
+        I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+        </p>
+    </div>
+    <div class="card-action">
+        <a href="#" class="default-dahsboard-link">This is a link</a>
+        <a href="#" class="default-dahsboard-link">This is a link</a>
+    </div>
+</div>
+
+<!-- Horizontal Card -->
+
+<div class="card horizontal">
+    <div class="card-image">
+        <img alt="card title" src="assets/images/card_03.jpg">
+    </div>
+    <div class="card-stacked">
+        <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.</p>
+        </div>
+        <div class="card-action">
+            <button type="button" class="btn btn-link">This is a link<button>
+        </div>
+    </div>
+</div>
+<!-- Card reveal -->
+
+<div class="card">
+    <div class="card-image">
+        <img alt="card title" class="activator" src="assets/images/card_02.jpg">
+    </div>
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+        <p>I am a very simple card.</p>
+    </div>
+    <div class="card-action">
+        <button type="button" class="btn btn-link">This is a link</button>
+    </div>
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+</div>
+
+```
+
+//////////////////////////// Lists
+
+# Lists
+
+Lists are a easy tool to use. Based on bootstrap lists blue dashboard lists provide a variety of options to use when listing your information.
+
+All you need to do to start using blue dashboard's lists is to include the blue dashboard styles file.
+
+
+<aside class="notice">
+Please note that if you intend to use the toggle list you need to include the <a href="http://bootstrapswitch.com/">Bootstrap switch</a> library.
+</aside>
+```HTML
+<!-- Basic list -->
+
+<div class="list-group glyph-color">
+    <a class="list-group-item">
+        <div class="glyphicon glyphicon-text-size"></div> First item</a>
+    <a class="list-group-item">
+        <div class="glyphicon glyphicon-menu-hamburger"></div> Second item</a>
+    <a class="list-group-item">
+        <div class="glyphicon glyphicon-stats"></div> Third item</a>
+    <a class="list-group-item">
+        <div class="glyphicon glyphicon-send"></div> Forth item</a>
+    <a class="list-group-item">
+        <div class="glyphicon glyphicon-flash"></div> Fifth item</a>
+</div>
+
+<!-- Blog list -->
+
+<div class="list-group">
+    <a class="list-group-item">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="assets/images/card_01.jpg" class="blog-img side-line">
+            </div>
+            <div class="col-sm-9">
+                <span>Title goes here Title goes here Title goes here Title goes here. </span>
+                <br>
+                <p class="list-date">Oct 22, 2016</p>
+            </div>
+        </div>
+    </a>
+    <a class="list-group-item">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="assets/images/card_02.jpg" class="blog-img side-line">
+            </div>
+            <div class="col-sm-9">
+                <span>Title goes here Title goes here Title goes here Title goes here. </span>
+                <br>
+                <p class="list-date">Aug 20, 2017</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+<!-- List With Header -->
+
+<ul class="list-group glyph-color">
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-sm-10 no-padding-right">
+                <h5 class="title-border">First</h5>
+            </div>
+            <div class="col-sm-2 no-padding-left">
+                <div class="glyphicon glyphicon-flash icon-list-border"></div>
+            </div>
+        </div>
+        <p class="box-size">Lorem ipsum dolor sit amet, cMaecenas ut fringilla libero. Nullam a rhoncus.</p>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-sm-10 no-padding-right">
+                <h5 class="title-border">Second</h5>
+            </div>
+            <div class="col-sm-2 no-padding-left">
+                <div class="glyphicon glyphicon-text-size icon-list-border"></div>
+            </div>
+        </div>
+        <p class="box-size">Lorem ipsum dolor sit amet, cMaecenas ut fringilla libero. Nullam a rhoncus.</p>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-sm-10 no-padding-right">
+                <h5 class="title-border">Third</h5>
+            </div>
+            <div class="col-sm-2 no-padding-left">
+                <div class="glyphicon  glyphicon-stats icon-list-border"></div>
+            </div>
+        </div>
+        <p class="box-size">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+    </li>
+</ul>
 ```
