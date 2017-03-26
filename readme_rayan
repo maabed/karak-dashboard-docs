@@ -842,3 +842,26 @@ Please note that if you intend to use the toggle list you need to include the <a
     </li>
 </ul>
 ```
+
+////////////////////// Hover
+
+# Hover
+
+Using this library will provide a nice animation for the element that is used on.
+
+In order to use the hovers you will need to include the <a href="http://ianlunn.github.io/Hover/">hover.css </a>library.
+
+All you have to do is to put the class of the animation you want such as `.hvr-grow-rotate` to the desired element.
+
+```HTML
+<!-- Hover.css library -->
+
+<link type="text/css" href="hover-min.css" />
+
+<!-- Examples -->
+
+<button class="hvr-pop">Pop</button>
+<button class="hvr-bounce-in">Bounce In</button>
+<button class="hvr-bounce-out">Bounce Out</button>
+<button class="hvr-rotate">Rotate</button>
+<button class="hvr-grow-rotate">Grow Rotate</buttona>
