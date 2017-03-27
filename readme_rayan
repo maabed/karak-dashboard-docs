@@ -1040,3 +1040,80 @@ To use blue dashboard costume menus all you need to do is include the blue dashb
     </nav>
 </div>
 ```
+
+////////////////////////// Tabs
+
+# Tabs
+
+Tabs gives a very nice display of data in your website.
+
+In order to use this utility you will have to include blue dashboard style file in addition to the tabs JS file. 
+
+```HTML
+<!-- Side Menu -->
+
+`<script type="text/javascript" src="taps.js"></script>`
+
+<!-- Bordered tab -->
+
+<div class="tabs-container">
+    <div class="tabs-header">
+        <ul class="nav nav-tabs bordered-tab nav-style info-mid">
+            <li class="active">
+                <a data-toggle="tab" href="#home">Home&nbsp;
+                    <span class="glyphicon glyphicon-home"></span>
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#menu1">About Us&nbsp;
+                    <span class="glyphicon glyphicon-info-sign"></span>
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#menu2">Our Services&nbsp;
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#menu3">Contact Us&nbsp;
+                    <span class="glyphicon glyphicon-send"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h3 class="tabs-head-title">
+                <span class="glyphicon glyphicon-home"></span>&nbsp;Default
+            </h3>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3 class="tabs-head-title">
+                <span class="glyphicon glyphicon-info-sign"></span>&nbsp;About Us
+            </h3>
+            <hr>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <h3 class="tabs-head-title">
+                <span class="glyphicon glyphicon glyphicon-star-empty"></span>&nbsp;Our Services
+            </h3>
+            <hr>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+            accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+            <h3 class="tabs-head-title">
+                <span class="glyphicon glyphicon-send"></span>&nbsp;Contact Us
+            </h3>
+            <hr>
+            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto 
+            beatae vitae dicta sunt explicabo.</p>
+        </div>
+    </div>
+</div>
+```
