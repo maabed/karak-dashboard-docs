@@ -1117,3 +1117,42 @@ In order to use this utility you will have to include blue dashboard style file 
     </div>
 </div>
 ```
+
+/////////////////////////////// Wizard
+
+# Wizard
+
+
+The form wizard form is an easier way to gather information and easier for the user to fill the form that way.
+
+Blue dashboard wizard is based on the <a href="http://vinceg.github.io/twitter-bootstrap-wizard/">twitter bootstrap wizard </a> library so you will have to include the JS file of that library.
+
+* Blue dashbaord form wizard uses 2 libraries in default :
+  - Select2 library
+  - Sweet alert library 
+
+So in order to use the wizard you will need Blue dashboard style file in addition to these 2 libraries files.
+
+<aside class="notice">
+Don't forget to include the JS file of the form wizard itself as shown in the example.
+</aside>
+```HTML
+<!-- twitter bootstrap wizard library -->
+
+`<script type="text/javascript" src="jquery.bootstrap.wizard.min.js"></script>`
+
+<!-- Select2 library -->
+
+`<link type="text/css" rel="stylesheet" href="assets/vendors/select2/css/select2.min.css">`
+`<script type="text/javascript" src="assets/vendors/sweet-alert/sweetalert.min.js"></script>`
+
+<!-- Sweet alert library -->
+
+`<link type="text/css" rel="stylesheet" href="assets/vendors/sweet-alert/sweetalert.css">`
+`<script type="text/javascript" src="assets/vendors/sweet-alert/sweetalert.min.js"></script>`
+
+<!-- Form wizard JS file -->
+
+`<script type="text/javascript" src="assets/js/form-wizard.js"></script>`
+
+```
