@@ -16,76 +16,13 @@ includes:
 search: true
 ---
 
-# Panels
+# Introduction
 
-In Blue dashboard panels you can use many types of panels such as collapsing panels and full screen panels or even draggable panels.
+Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
 
-All you need to do is to include the blue dashboard style file.
+We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-
-<aside class="notice">
-Please note that if you want to use the drag and drop panel you need to include <a href="https://bevacqua.github.io/dragula/">Dragula</a> library in addition to the Drag and drop costume file as shown in the example.
-</aside>
-
-
-```HTML
-<!-- Dragula library -->
-
-`<link type="text/css" href="dragula.css" />`
-`<script type="text/javascript" src="dragula.js"></script>`
-
-<!-- Drag and drop costume file -->
-
-`<link type="text/css" href="drag_drop.css" />`
-
-<!-- Collapsible Panel -->
-
-<div class="panel-group">
-    <div class="panel panel-default no-borders">
-        <div class="panel-heading dashboard-panel">
-            Panel Heading
-            <a data-toggle="collapse" data-target="#demo">
-                <span class="glyphicon glyphicon-chevron-up float-right"></span>
-            </a>
-        </div>
-        <div id="demo" class="panel-collapse collapse in">
-            <div class="panel-body">
-                <p>
-                    Lorem Ipsum is simply dumtype setting industry. Lorem Ipstandard dummy text ever since the scrambled.
-                </p>
-            </div>
-            <div class="panel-footer">Panel Footer</div>
-        </div>
-    </div>
-</div>
-
-<!-- Panels With Fullscreen -->
-
-<div class="panel panel-default no-borders">
-    <div class="panel-heading">
-        Panel Heading
-        <ul class="list-inline panel-actions">
-            <li>
-                <p id="panel-fullscreen" role="button" title="Toggle fullscreen"><i class="glyphicon glyphicon-resize-full"></i></li>
-        </ul>
-    </div>
-    <div class="panel-body">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
-        industry. Lorem Ipsum has been the industry's standard dummy text ever 
-        since the scrambled Lorem Ipsum has been the industry's.
-        </p>
-    </div>
-</div>
-
-<!-- Panels With Contextual Classes -->
-
-<div class="panel panel-primary">
-    <div class="panel-heading primary-mid">Panel with panel-primary class</div>
-    <div class="panel-body">Panel Content</div>
-</div>
-
-```
-
+This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
 # Authentication
 

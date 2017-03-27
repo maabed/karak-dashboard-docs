@@ -865,3 +865,178 @@ All you have to do is to put the class of the animation you want such as `.hvr-g
 <button class="hvr-bounce-out">Bounce Out</button>
 <button class="hvr-rotate">Rotate</button>
 <button class="hvr-grow-rotate">Grow Rotate</buttona>
+```
+////////////////////// Panels
+
+# Panels
+
+In Blue dashboard panels you can use many types of panels such as collapsing panels and full screen panels or even draggable panels.
+
+All you need to do is to include the blue dashboard style file and the panels JS file.
+
+
+<aside class="notice">
+Please note that if you want to use the drag and drop panel you need to include <a href="https://bevacqua.github.io/dragula/">Dragula</a> library in addition to the Drag and drop costume file as shown in the example.
+</aside>
+
+
+```HTML
+
+<!-- Panels JS file -->
+
+`<script type="text/javascript" src="panels.js"></script>`
+
+
+<!-- Dragula library -->
+
+`<link type="text/css" href="dragula.css" />`
+`<script type="text/javascript" src="dragula.js"></script>`
+
+<!-- Drag and drop costume file -->
+
+`<link type="text/css" href="drag_drop.css" />`
+
+<!-- Collapsible Panel -->
+
+<div class="panel-group">
+    <div class="panel panel-default no-borders">
+        <div class="panel-heading dashboard-panel">
+            Panel Heading
+            <a data-toggle="collapse" data-target="#demo">
+                <span class="glyphicon glyphicon-chevron-up float-right"></span>
+            </a>
+        </div>
+        <div id="demo" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <p>
+                    Lorem Ipsum is simply dumtype setting industry. Lorem Ipstandard dummy text ever since the scrambled.
+                </p>
+            </div>
+            <div class="panel-footer">Panel Footer</div>
+        </div>
+    </div>
+</div>
+
+<!-- Panels With Fullscreen -->
+
+<div class="panel panel-default no-borders">
+    <div class="panel-heading">
+        Panel Heading
+        <ul class="list-inline panel-actions">
+            <li>
+                <p id="panel-fullscreen" role="button" title="Toggle fullscreen"><i class="glyphicon glyphicon-resize-full"></i></li>
+        </ul>
+    </div>
+    <div class="panel-body">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
+        industry. Lorem Ipsum has been the industry's standard dummy text ever 
+        since the scrambled Lorem Ipsum has been the industry's.
+        </p>
+    </div>
+</div>
+
+<!-- Panels With Contextual Classes -->
+
+<div class="panel panel-primary">
+    <div class="panel-heading primary-mid">Panel with panel-primary class</div>
+    <div class="panel-body">Panel Content</div>
+</div>
+```
+
+
+////////////////////////////// Menus
+
+# Menu
+
+You can use menus to categorize the information you want to display.
+
+To use blue dashboard costume menus all you need to do is include the blue dashboard style file and after that proceed as it shows in the example.
+
+```HTML
+<!-- Side Menu -->
+
+<div class="menu-container height-32">
+    <nav class="navbar sidebar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Blue Dashboard</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a>Home
+                        <span class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+                    </a>
+                </li>
+                <li>
+                    <a>Profile
+                        <span  class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+                    </a>
+                </li>
+                <li>
+                    <a>Messages
+                        <span class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">Settings
+                        <span class="caret"></span>
+                        <span class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span>
+                    </a>
+                    <ul class="dropdown-menu forAnimate" role="menu">
+                        <li><a>Action</a></li>
+                        <li><a>Another action</a></li>
+                        <li><a>Something else here</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>Home
+                        <span class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+                    </a>
+                </li>
+                <li>
+                    <a>Profile
+                        <span class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+                    </a>
+                </li>
+                <li>
+                    <a>Messages
+                        <span class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<!-- Simple Menu -->
+<div class="menu-container">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="active"><a>Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
+                        <span class="caret"></span>
+                    </a> 
+                    <ul class="dropdown-menu">
+                        <li><a>Services 1-1</a></li>
+                        <li><a>Services 1-2</a></li>
+                        <li><a>Services 1-3</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+```
