@@ -248,6 +248,7 @@ Include those two files into your code: <br>
 
 `<link type="text/css" href="bootstrap-tagsinput.css">` <br>
 `<script type="text/javascript" src="bootstrap-tagsinput.js"></script>`
+`<script type="text/javascript" src="typeahead.bundle.min.js"></script>`
 
 <aside class="notice">
 The objects tags amd the categorized tags needs to be initialized in javascript and the the values added to them there.
@@ -1154,5 +1155,42 @@ Don't forget to include the JS file of the form wizard itself as shown in the ex
 <!-- Form wizard JS file -->
 
 `<script type="text/javascript" src="assets/js/form-wizard.js"></script>`
+
+```
+/////////////////// Email
+
+
+```HTML
+<!-- INBOX PAGE-->
+<!-- Text editor and summernote CSS -->
+
+`<link rel="stylesheet" href="assets/css/text-editor.css">`
+`<link href="summernote.css" rel="stylesheet">`
+`<script src="summernote.js"></script>`
+
+<!-- moment.js -->
+
+`<script src="moment.js"></script>`
+
+<!-- Inbox page JS -->
+
+`<script src="inbox.js"></script>`
+
+
+<!-- COMPOSE PAGE -->
+<!-- Tags input library -->
+
+`<link type="text/css"  href="bootstrap-tagsinput.css">`
+`<script type="text/javascript" src="assets/vendors/tag-input/bootstrap-tagsinput.js"></script>`
+
+<!-- Text editor and summernote CSS  -->
+
+`<link type="text/css" href="text-editor.css">`
+`<link href="summernote.css">`
+
+<!-- Compose page JS -->
+
+`<script type="text/javascript" src="compose.js"></script>`
+
 
 ```
