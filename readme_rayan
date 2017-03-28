@@ -1194,3 +1194,127 @@ Don't forget to include the JS file of the form wizard itself as shown in the ex
 
 
 ```
+
+/////////////////// Chart
+
+
+# Charts
+
+Charts is a very effective way to display statistics.
+
+* In blue Dashboard we used a couple of libraries to display charts: 
+  - <a href="http://www.highcharts.com/">HIGH CHARTS. </a>
+  - <a href="http://www.chartjs.org/">CHARTS JS. </a>
+
+All you need to do to use them is including the library JS file and then initialize the chart on a `div` in the html page.
+
+```HTML
+<!-- Highcharts library -->
+
+`<script type="text/javascript" src="highcharts.js"></script>`
+
+<!-- ChartJS library -->
+
+`<script type="text/javascript" src="chart.bundle.min.js"></script>`
+
+
+<!-- High charts -->
+
+<div id="container4"></div>
+
+
+<!-- Chart JS -->
+<canvas id="line"></canvas>
+
+```
+
+```javascript
+
+// High charts initialization
+
+Highcharts.chart('container4', {
+  chart: {
+    margin: [20, 0, 80, 25],
+  },
+  xAxis: {
+    min: -0.5,
+    max: 5.5
+  },
+  yAxis: {
+    min: 0
+  },
+  title: {
+    text: ''
+  },
+  exporting: {
+    buttons: [{
+      symbol: '',
+    }]
+  },
+  series: [{
+    type: 'line',
+    name: 'Regression Line',
+    data: [
+      [0, 1.11],
+      [5, 4.51]
+    ],
+    marker: {
+      enabled: false
+    },
+    states: {
+      hover: {
+        lineWidth: 0
+      }
+    },
+    enableMouseTracking: false
+  }, {
+    type: 'scatter',
+    name: 'Observations',
+    data: [1, 1.5, 2.8, 3.5, 3.9, 4.2],
+    marker: {
+      radius: 4
+    }
+  }]
+});
+
+// Chart JS initialization
+
+var ctx4 = document.getElementById('line');
+var myLineChart = new Chart(ctx4, {
+  type: 'line',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+      label: 'My First dataset',
+      fill: true,
+      lineTension: 0.1,
+      backgroundColor: 'rgba(75,192,192,0.4)',
+      borderColor: 'rgba(75,192,192,1)',
+      borderCapStyle: 'butt',
+      borderDash: [],
+      borderDashOffset: 0.0,
+      borderJoinStyle: 'miter',
+      pointBorderColor: 'rgba(75,192,192,1)',
+      pointBackgroundColor: '#fff',
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+      pointHoverBorderColor: 'rgba(220,220,220,1)',
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      data: [65, 59, 80, 81, 56, 55, 40],
+      spanGaps: false,
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
+```
