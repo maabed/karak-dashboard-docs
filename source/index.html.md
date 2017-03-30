@@ -7,11 +7,7 @@ language_tabs:
   - css
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
-
-includes:
-  - errors
 
 search: true
 ---
@@ -27,6 +23,46 @@ This Documentation will help you to use the dashboard effectively.
 ## Getting Started
 
 You can use blue dashboard to add multiple features and pages in your website, all you have to do is to <a href="https://github.com/new-release/Blue-dashboard">download our dashboard or fork it from github</a>.
+
+### Configs 
+
+Blue dashboard uses a variety of plugins and libraries so in order for you to make use of the feature in your website you will need to include some files first.
+
+Those file are mandatory for the use of the dashboard features.
+
+```html
+<!-- Jquery Framework -->
+
+<script type="text/javascript" src="assets/vendors/jquery/jquery-3.1.1.js"></script>
+
+<!-- Bootstrap Framework -->
+
+<link type="text/css" href="assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<script type="text/javascript" src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Google fonts -->
+
+<link type="text/css" href="assets/vendors/google-fonts/google-fonts.css" rel="stylesheet">
+
+<!-- Font Awesome library -->
+
+<link type="text/css" href="assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Blue dashboard style -->
+
+<link type="text/css" href="assets/css/style.css" rel="stylesheet" />
+
+<!-- Blue dashboard main JS file -->
+
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+<!-- Blue dashboard notifications JS file -->
+
+<script type="text/javascript" src="assets/js/notifications_boxs.js"></script>
+
+
+```
 
 ## Grunt
 
@@ -92,7 +128,7 @@ All you need to do is to include Blue Dashboard customized CSS file in addition 
 
 <!-- materialize JS file -->
 
-<script type="text/javascript" src="materialize.min.js"></script>
+<script type="text/javascript" src="assets/vendors/materialize/materialize.min.js"></script>
 
 <!-- Basic input field -->
 
@@ -125,11 +161,11 @@ Don't forget to initialize the range in the javascript
 ```html
 <!-- ionrange slider library -->
 
-<link type="text/css" href="ion.rangeSlider.css">
+<link type="text/css" rel="stylesheet" href="assets/vendors/ion-slider/css/ion.rangeSlider.css">
 
-<link type="text/css" href="ion.rangeSlider.skinNice.css">
+<link type="text/css" href="assets/vendors/ion-slider/css/ion.rangeSlider.skinNice.css">
 
-<script type="text/javascript" src="ion.rangeSlider.min.js"></script>
+<script type="text/javascript" src="assets/vendors/ion-slider/js/ion.rangeSlider.min.js"></script>
 
 <!-- Slider container -->
 
@@ -173,9 +209,9 @@ Don't forget to initialize the select dropdown in the javascript
 ```html
 <!-- Select2 library -->
 
-<link type="text/css" href="select2.min.css">
+<link type="text/css" rel="stylesheet" href="assets/vendors/select2/css/select2.min.css">
 
-<script type="text/javascript" src="select2.min.js"></script>
+<script type="text/javascript" src="assets/vendors/select2/js/select2.min.js"></script>
 
 <!-- Dropdown element -->
 
@@ -212,7 +248,7 @@ Don't forget to initialize the yes/no checkbox in the javascript
 ```html
 <!-- Bootstrap checkbox library -->
 
-<script type="text/javascript" src="bootstrap-checkbox.min.js"></script>
+<script type="text/javascript" src="assets/vendors/checbox-picker/dist/js/bootstrap-checkbox.min.js"></script>
 
 <!--  Colored checkboxes: -->
 
@@ -251,24 +287,23 @@ Don't forget to initialize the range datepickers in the javascript
 ```html
 <!-- Date eange picker library -->
 
-<link type="text/css" href="/daterangepicker.css" />
+<link type="text/css" rel="stylesheet" href="assets/vendors/datepickers/daterangepicker.css" />
 
 <script type="text/javascript" src="daterangepicker.js"></script>
 
 <!-- clock picker library -->
 
-<link type="text/css" href="bootstrap-clockpicker.min.css">
+<script type="text/javascript" src="assets/vendors/datepickers/daterangepicker.js"></script>
 
-<script type="text/javascript" src="bootstrap-clockpicker.min.js"></script>
+<script type="text/javascript" type="text/javascript" src="assets/vendors/clockpicker/bootstrap-clockpicker.min.js"></script>
 
 <!-- air datepicker library -->
 
-<link type="text/css" href="datepicker.min.css">
+<link type="text/css" rel="stylesheet" href="assets/vendors/air-datepicker/css/datepicker.min.css">
 
-<script type="text/javascript" src="datepicker.min.js"></script>
+<script type="text/javascript" src="assets/vendors/air-datepicker/js/datepicker.min.js"></script>
 
-<script type="text/javascript" src="datepicker.en.js"></script>
-
+<script type="text/javascript" src="assets/vendors/air-datepicker/js/datepicker.en.js"></script>
 <!-- Range Datepicker -->
 
 <input type="text" name="daterange" class="form-control simple" value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM" />
@@ -351,11 +386,11 @@ The objects tags amd the categorized tags needs to be initialized in javascript 
 ```html
 <!-- Tags input library -->
 
-<link type="text/css" href="bootstrap-tagsinput.css">
+<link type="text/css" rel="stylesheet" href="assets/vendors/tag-input/bootstrap-tagsinput.css">
 
-<script type="text/javascript" src="bootstrap-tagsinput.js"></script>
+<script type="text/javascript" src="assets/vendors/tag-input/bootstrap-tagsinput.js"></script>
 
-<script type="text/javascript" src="typeahead.bundle.min.js"></script>
+<script type="text/javascript" src="assets/vendors/tag-input/typeahead.bundle.min.js"></script>
 
 <!-- Markup -->
 
@@ -449,9 +484,9 @@ You can use this feature by including the <a href="http://www.dropzonejs.com/">d
 ```html
 <!-- dropzone library -->
 
-<link type="text/css" href="dropzone.css">
+<link type="text/css" rel="stylesheet" href="assets/vendors/drop-zone/dropzone.css">
 
-<script type="text/javascript" src="dropzone.js"></script>
+<script type="text/javascript" src="assets/vendors/drop-zone/dropzone.js"></script>
 
 <!-- Dropzone container -->
 
@@ -508,8 +543,7 @@ Don't forget to include the JS file of the form wizard itself as shown in the ex
 ```html
 <!-- twitter bootstrap wizard library -->
 
-<script type="text/javascript" src="jquery.bootstrap.wizard.min.js"></script>
-
+<script type="text/javascript" src="assets/vendors/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
 <!-- Select2 library -->
 
 <link type="text/css" rel="stylesheet" href="assets/vendors/select2/css/select2.min.css">
@@ -524,7 +558,7 @@ Don't forget to include the JS file of the form wizard itself as shown in the ex
 
 <!-- Form wizard JS file -->
 
-`<script type="text/javascript" src="assets/js/form-wizard.js"></script>`
+<script type="text/javascript" src="assets/js/form-wizard.js"></script>
 
 ```
 
@@ -541,34 +575,36 @@ Don't forget to include the JS file of the form wizard itself as shown in the ex
 <!-- Text editor and summernote CSS -->
 
 <link rel="stylesheet" href="assets/css/text-editor.css">
-<link href="summernote.css" rel="stylesheet">
-<script src="summernote.js"></script>
+
+<link href="assets/vendors/summernote/summernote.css" rel="stylesheet">
+
+<script src="assets/vendors/summernote/summernote.js"></script>
 
 <!-- moment.js -->
 
-<script src="moment.js"></script>
+<script src="assets/vendors/momentjs/moment.js"></script>
 
 <!-- Inbox page JS -->
 
-<script src="inbox.js"></script>
+<script src="assets/js/inbox.js"></script>
 
 
 <!-- COMPOSE PAGE -->
 <!-- Tags input library -->
 
-<link type="text/css"  href="bootstrap-tagsinput.css">
+<link type="text/css" rel="stylesheet" href="assets/vendors/tag-input/bootstrap-tagsinput.css">
 
 <script type="text/javascript" src="assets/vendors/tag-input/bootstrap-tagsinput.js"></script>
 
 <!-- Text editor and summernote CSS  -->
 
-<link type="text/css" href="text-editor.css">
+<link type="text/css" rel="stylesheet" href="assets/css/text-editor.css">
 
-<link href="summernote.css">
+<link href="assets/vendors/summernote/summernote.css" rel="stylesheet">
 
 <!-- Compose page JS -->
 
-<script type="text/javascript" src="compose.js"></script>
+<script type="text/javascript" src="assets/js/compose.js"></script>
 
 
 ```
@@ -612,19 +648,19 @@ You can use Blue Dashboard notifications in your website very easily all you hav
 
 <!-- Bootstrap CSS file -->
 
-<link type="text/css" href="bootstrap.min.css">
+<link type="text/css" href="assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Sweet alert library -->
 
-<link type="text/css" href="sweetalert.css">
+<link type="text/css" rel="stylesheet" href="assets/vendors/sweet-alert/sweetalert.css">
 
-<script type="text/javascript" src="sweetalert.min.js"></script>
+<script type="text/javascript" src="assets/vendors/sweet-alert/sweetalert.min.js"></script>
 
 <!-- Toastr alert library -->
 
-<link type="text/css" href="toastr.css" />
+<link type="text/css" href="assets/vendors/toastr/toastr.css" rel="stylesheet" />
 
-<script type="text/javascript" src="toastr.js"></script>
+<script type="text/javascript" src="assets/vendors/toastr/toastr.js"></script>
 
 <!-- Bootstrap success alert -->
 
@@ -870,7 +906,7 @@ Please note that in blue dashboard the loaders are displayed and hidden using Jq
 
 <!-- Progress bar.js library -->
 
-<script type="text/javascript" src="progressbar.min.js"></script>
+<script type="text/javascript" src="assets/vendors/progressbar/progressbar.min.js"></script>
 
 <!-- Progress bar-circle container -->
 
@@ -1122,7 +1158,7 @@ All you have to do is to put the class of the animation you want such as `.hvr-g
 ```html
 <!-- Hover.css library -->
 
-<link type="text/css" href="hover-min.css" />
+<link type="text/css" href="assets/css/hover-min.css" rel="stylesheet" />
 
 <!-- Examples -->
 
@@ -1149,17 +1185,18 @@ Please note that if you want to use the drag and drop panel you need to include 
 
 <!-- Panels JS file -->
 
-`<script type="text/javascript" src="panels.js"></script>`
+<script type="text/javascript" src="assets/js/panels.js"></script>
 
 
 <!-- Dragula library -->
 
-`<link type="text/css" href="dragula.css" />`
-`<script type="text/javascript" src="dragula.js"></script>`
+<link type="text/css" href="assets/css/dragula.css" rel="stylesheet" />
+
+<script type="text/javascript" src="assets/js/dragula.js"></script>
 
 <!-- Drag and drop costume file -->
 
-`<link type="text/css" href="drag_drop.css" />`
+<link type="text/css" href="assets/css/drag_drop.css" rel="stylesheet" />
 
 <!-- Collapsible Panel -->
 
@@ -1315,7 +1352,7 @@ In order to use this utility you will have to include blue dashboard style file 
 
 <!-- Customized tabs initialization -->
 
-<script type="text/javascript" src="taps.js"></script>
+<script type="text/javascript" src="assets/js/taps.js"></script>
 
 <!-- Bordered tab -->
 
@@ -1541,6 +1578,8 @@ var myLineChart = new Chart(ctx4, {
 Blue Dashboard use <a target="_blank" href="http://getbootstrap.com/css/#tables">Bootstrap</a> tables with custom design.
 You can use any custom class with <code>table</code> tag to get the style.
 
+* In order to use the basic tables all you need to do is to include the blue dashboard style file.
+
 ### Users Table Style
 
 You juat need to add <code>.users-table</code> class to the table tag to git this style.
@@ -1548,6 +1587,9 @@ You juat need to add <code>.users-table</code> class to the table tag to git thi
 <img src="images/users_table.png"/>
 
 ```html
+
+<!-- Users table -->
+
 <table class="table table-hover users-table">
   <thead class="table-head">
     <tr>
@@ -1632,6 +1674,9 @@ Just apply Dashed class(<code>.dashed-row-style</code>) to make the table Dashed
 <img src="images/dashed_table.png" />
 
 ```html
+
+<!-- Dashed Table -->
+
 <table class="table dashed-row-style dashed-table">
   <thead class="table-head no-left-right-padding">
     <tr>
@@ -1709,13 +1754,13 @@ You can read DataTables <a href="https://datatables.net/examples/index">document
 
 <!-- Datatable library -->
 
-<script type="text/javascript" src="jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="assets/vendors/datatables/media/js/jquery.dataTables.min.js"></script>
 
-<script type="text/javascript" src="dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="assets/vendors/datatables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
 
-<script type="text/javascript" src="buttons.html5.min.js"></script>
+<script type="text/javascript" src="assets/vendors/datatables/extensions/Buttons/js/buttons.html5.min.js"></script>
 
-<script type="text/javascript" src="data_table.js"></script>
+<script type="text/javascript" src="assets/js/data_table.js"></script>
 
 <!-- Datatable -->
 
@@ -1784,69 +1829,71 @@ You can manage your personal banking accounts using the account management view.
 
 <!-- Account management library -->
 
-<script type="text/javascript" src="account-manager.js"></script>
+<script type="text/javascript" src="assets/js/account-manager.js"></script>
 
 <!-- Date Picker -->
 
-<link type="text/css" rel="stylesheet" type="text/css" href="daterangepicker.css" />
-<link type="text/css" rel="stylesheet" type="text/css" href="datepicker.min.css">
-<script type="text/javascript" src="datepicker.min.js"></script>
-<script type="text/javascript" src="datepicker.en.js"></script>
+<link type="text/css" rel="stylesheet" type="text/css" href="assets/vendors/air-datepicker/css/datepicker.min.css">
+
+<script type="text/javascript" src="assets/vendors/air-datepicker/js/datepicker.min.js"></script>
+<script type="text/javascript" src="assets/vendors/air-datepicker/js/datepicker.en.js"></script>
 
 <!-- Charts -->
 
-<script type="text/javascript" src="highcharts.js"></script>
-<script type="text/javascript" src="data.js"></script>
-<script type="text/javascript" src="exporting.js"></script>
+<script type="text/javascript" src="assets/vendors/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="assets/vendors/highcharts/modules/data.js"></script>
+<script type="text/javascript" src="assets/vendors/highcharts/modules/exporting.js"></script>
 
 <!-- DataTables -->
 
-<script type="text/javascript" src="jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="dataTables.buttons.min.js"></script>
-<script type="text/javascript" src="buttons.html5.min.js"></script>
+<script type="text/javascript" src="assets/vendors/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="assets/vendors/datatables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="assets/vendors/datatables/extensions/Buttons/js/buttons.html5.min.js"></script>
 
 ```
 
 ## Landing Page
 
-This view include five main sections : 
+* Landing page includes 6 sections :
+  - Showcase Video.
+  - Features (Using <a target="_blank" href="https://owlcarousel2.github.io/OwlCarousel2/"> OWL Carousel </a>Library).
+  - Technologies.
+  - Our Team.
+  - Pricing.
+  - Map (Using Google Map API).
+
+
 <br><br>
 <img src="images/landing_page.png">
 
-### Showcase Video
-
-### Features
-
-Using <a target="_blank" href="https://owlcarousel2.github.io/OwlCarousel2/">OWL Carousel</a> Library.
-
 ```html
-    <link rel="stylesheet" href="assets/vendors/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/vendors/owlcarousel/owl.carousel.css">
-    <link rel="stylesheet" href="assets/vendors/owlcarousel/owl.theme.default.min.css">
-    <script src="assets/vendors/owlcarousel/highlight.js"></script>
-    <script src="assets/vendors/owlcarousel/app.js"></script>
-    <script src="assets/vendors/owlcarousel/owl.carousel.js"></script>
-    <script src="assets/vendors/owlcarousel/owl.carousel.min.js"></script>
-```
 
-### Technologies
+<!-- Owl carousel library -->
 
-### Our Team
+<link rel="stylesheet" href="assets/vendors/owlcarousel/owl.carousel.css">
 
-### Pricing
+<link rel="stylesheet" href="assets/vendors/owlcarousel/owl.theme.default.min.css">
 
-### Map
+<script src="assets/vendors/owlcarousel/highlight.js"></script>
 
-Using Google Map API.
+<script src="assets/vendors/owlcarousel/app.js"></script>
 
-```html
+<script src="assets/vendors/owlcarousel/owl.carousel.js"></script>
+
+<!-- Landing page JS file -->
+
 <script src="assets/js/landing_map.js"></script>
+
+<!-- Google API -->
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0bxmUytZ20M6YA2DA7auQPOB97kzjlHw&callback=initMap" async defer></script>
+
 ```
 
 ## Chat View
 
-Blue Dashboard include a full chat application view with many features like create a new channels or start a new direct conversation with any user, also you can send multi types of messages (text, image, youtube video..)
+Blue Dashboard include a full chat application view with many features like create a new channels or start a new direct conversation with any user, also you can send many types of messages (text, image, youtube video..)
+
 
 <img src="images/chat_view.png">
 
@@ -1858,21 +1905,26 @@ Blue Dashboard include a full chat application view with many features like crea
 
 <img src="images/direct_message.png">
 
+* All you need to do to use this page is to include the blue dashboard style file in addition to the chat JS file as shown in the example.
+
 ```html
+<!-- Chat JS file -->
+
  <script src="assets/js/chat.js"></script>
+
 ```
 
 ## Social
 
-You can use Blue Dashboard social view for any social timeline. This view include a multi types of posts (text, image, video, gif).
+You can use Blue Dashboard social view for any social timeline. This view include a many types of posts (text, image, video, gif).
 <br><br>
 <img src="images/social.png">
 
-### Social Lib
-
-You only need to include social view js file in HTML page to use this view.
+* You only need to include social view JS file in HTML page to use this view.
 
 ```html
+<!-- Social JS file -->
+
 <script type="text/javascript" src="assets/js/social.js"></script>
 ```
 
@@ -1882,51 +1934,135 @@ You only need to include social view js file in HTML page to use this view.
 
 ## Vector Map
 
-We use <a target="_blank" href="http://www.highcharts.com/maps/demo">Highmaps</a> library in this view.
+We used <a target="_blank" href="http://www.highcharts.com/maps/demo">Highmaps</a> library in this view.
 
 <img src="images/vector_map.png">
 
-```html
-<div id="container" class="map-layout"></div>
+* In order to use the features of this page all you need to do is to: 
 
-<script type="text/javascript" src="assets/js/map.js"></script>
+  - Include the highmaps library in your HTML page.
+  - define a container in the HTML page.
+  - Initialize the map in JS. 
+
+  as shown in the example.
+
+```html
+<!-- Map container -->
+
+<div id="container"></div>
+
+<!-- highmaps library -->
+
 <script type="text/javascript" src="assets/vendors/highmaps/code/highmaps.js"></script>
 <script type="text/javascript" src="assets/vendors/highmaps/code/modules/data.js"></script>
 <script type="text/javascript" src="assets/vendors/highmaps/code/modules/exporting.js"></script>
 <script type="text/javascript" src="assets/vendors/highmaps/code/custom/world.js"></script>
+
+```
+
+```javascript
+
+  // Initiate the chart
+
+$.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=world-population-density.json&callback=?', function(data) {
+
+$('#container').highcharts('Map', {
+    title: {
+      text: ''
+    },
+    mapNavigation: {
+      enabled: true,
+      buttonOptions: {
+        verticalAlign: 'bottom'
+      },
+      enableMouseWheelZoom: false
+    },
+    colorAxis: {
+      dataClasses: [{
+        to: 100,
+        color: '#67b2e4'
+      }, {
+        from: 100,
+        to: 10000,
+        color: '#999999'
+      }],
+      min: 1,
+      max: 1000,
+      type: 'logarithmic'
+    },
+    exporting: {
+      buttons: [{
+        symbol: '',
+      }]
+    },
+    series: [{
+      data: data,
+      mapData: Highcharts.maps['custom/world'],
+      joinBy: ['iso-a2', 'code'],
+      name: 'Cumulative Sales',
+      color: 'red',
+      states: {
+        hover: {
+          color: '#3498db'
+        }
+      },
+      tooltip: {
+        valueSuffix: '0$'
+      }
+    }]
+  });
+});
+
 ```
 
 ## Google Map
 
 This map created using <a href="https://developers.google.com/maps/documentation/javascript/tutorial" target="_blank">google maps javascript API</a>.
 
+* All you need to do is to include blue dashboard's style file in addition to the google map style file and the google api library file.
+
 <img src="images/google_map.png" />
 
 ```html
+<!-- google maps Css file -->
+
 <link type="text/css" rel="stylesheet" href="assets/css/google-map.css">
+
+<!-- google api library -->
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0bxmUytZ20M6YA2DA7auQPOB97kzjlHw&callback=initMap" async defer></script>
+
+<script type="text/javascript" src="assets/js/google-maps.js"></script>
+
+<!-- map container -->
 
 <div id="map"></div>
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0bxmUytZ20M6YA2DA7auQPOB97kzjlHw&callback=initMap" async defer></script>
-<script type="text/javascript" src="assets/js/google-maps.js"></script>
+
 ```
 ### Map Options
-There are two required options for every map: center and zoom.
+
+* There are two required options for every map:
+  - Center 
+  - Zoom.
 
 ```javascript
+
+// Map initialization 
+
 map = new google.maps.Map(document.getElementById('map'), {
   center: {lat: -34.397, lng: 150.644},
   zoom: 8
 });
+
 ```
 
-### Zoom Levels
-
-#### 1: World
-#### 5: Landmass/continent
-#### 10: City
-#### 15: Streets
-#### 20: Buildings
+* Zoom Levels
+ - 1: World
+ - 5: Landmass/continent
+ - 10: City
+ - 15: Streets
+ - 20: Buildings
 
 <img src="images/google_map_zoom.png"> 
 
@@ -1935,4 +2071,79 @@ map = new google.maps.Map(document.getElementById('map'), {
 
 Blue Dashboard include invoice view with save and print feature.
 
+* All you have to do to use this feature is to include the blue dashboard style file and copy the source code to your HTML page.
+
 <img src="images/invoice.png">
+
+# The Dashboard
+
+The features provided by the Blue dashboard:
+
+  * Dashboard
+
+  * Forms
+    - Forms Elements
+    - Forms Wizard
+
+  * Charts
+
+  * Email
+
+  * UI Elements
+    - Icons
+    - Colors
+    - Buttons
+    - Notifications
+    - Modals
+    - Tabs
+    - Cards
+    - Loading & progress
+    - Panels
+    - Lists
+    - Menus
+    - Hover
+
+  * Calendar
+
+  * App Views 
+    - Account management
+    - Landing page
+    - Chat View
+    - Social
+
+  * Tables
+    - Basic table
+    - Data table
+
+  * Maps
+    - Vector maps
+    - Google maps
+
+  * Extra
+    - Invoice
+    - 404 page
+    - 500 page
+    - Login & registration 
+    - Lock screen
+    - Tour
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
