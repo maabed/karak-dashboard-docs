@@ -14,19 +14,19 @@ search: true
 
 # Introduction
 
-Welcome to the Blue Dashboard! You can use our dashboard to manage your business easily, where you can get information and statistics through charts, tables, modals and more.
+Welcome to the Karak Dashboard! You can use our dashboard to manage your business easily, where you can get information and statistics through charts, tables, modals and more.
 
-Blue Dashboard is built using modern Bootstrap according to high standards in UX/UI design.
+Karak Dashboard is built using modern Bootstrap according to high standards in UX/UI design.
 
 This Documentation will help you to use the dashboard effectively.
 
 ## Getting Started
 
-You can use blue dashboard to add multiple features and pages in your website, all you have to do is to <a href="https://github.com/new-release/Blue-dashboard">download our dashboard or fork it from github</a>.
+You can use Karak dashboard to add multiple features and pages in your website, all you have to do is to <a href="https://github.com/new-release/Karak-dashboard">download our dashboard or fork it from github</a>.
 
 ### Features
 
-The features provided by the Blue dashboard:
+The features provided by the Karak dashboard:
 
   * Dashboard
 
@@ -78,7 +78,7 @@ The features provided by the Blue dashboard:
 
 ### Configs 
 
-Blue dashboard uses a variety of plugins and libraries so in order for you to make use of the feature in your website you will need to include some files first.
+Karak dashboard uses a variety of plugins and libraries so in order for you to make use of the feature in your website you will need to include some files first.
 
 Those file are mandatory for the use of the dashboard features.
 
@@ -101,15 +101,15 @@ Those file are mandatory for the use of the dashboard features.
 
 <link type="text/css" href="assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
-<!-- Blue dashboard style -->
+<!-- Karak dashboard style -->
 
 <link type="text/css" href="assets/css/style.css" rel="stylesheet" />
 
-<!-- Blue dashboard main JS file -->
+<!-- Karak dashboard main JS file -->
 
 <script type="text/javascript" src="assets/js/main.js"></script>
 
-<!-- Blue dashboard notifications JS file -->
+<!-- Karak dashboard notifications JS file -->
 
 <script type="text/javascript" src="assets/js/notifications_boxs.js"></script>
 
@@ -122,7 +122,7 @@ In one word: automation. The less work you have to do when performing repetitive
 
 ### Getting started 
 
-In Blue dashboard we decided to use a node application by using <a href="https://www.npmjs.com/">npm</a>.
+In Karak dashboard we decided to use a node application by using <a href="https://www.npmjs.com/">npm</a>.
 When creating a node application you will need a file called package.json to manage local npm packages.'
 
 > package.json file
@@ -161,34 +161,42 @@ When creating a node application you will need a file called package.json to man
 ```javascript
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-contrib-less');  //Load grunt less task
-  grunt.loadNpmTasks('grunt-contrib-sass');  //Load grunt sass task
-  grunt.loadNpmTasks('grunt-contrib-watch'); //Load grunt watch task
+  // Load grunt less task
+  grunt.loadNpmTasks('grunt-contrib-less');
+  // Load grunt sass task
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  // Load grunt watch task
+  grunt.loadNpmTasks('grunt-contrib-watch');
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-
+    
+    // Compile SCSS file
     sass: {
       dist: {
         files: {
-          'assets/css/dist_file': 'assets/scss/source_file'  //Compile SCSS file
+          'assets/css/dist_file': 'assets/scss/source_file'
         }
       }
     },
+
+    // Compile LESS file
     less: {
       development: {
         options: {
           paths: ['assets/less']
         },
         files: {
-          'assets/css/dist_file': 'assets/less/source_file' //Compile LESS file
+          'assets/css/dist_file': 'assets/less/source_file'
         }
       }
     },
-    watch:{
-      less:{
-        files:['assets/less/your_less_file.less'], //monitor LESS files for changes
-        tasks:['less']
+
+    // Monitor LESS files for changes
+    watch: {
+      less: {
+        files: ['assets/less/your_less_file.less'],
+        tasks: ['less']
       },
     }
   });
@@ -198,7 +206,7 @@ module.exports = function(grunt) {
 
 ### installation
 
-* In Blue dashboard we decided to use a node application by using npm to compile the SASS and LESS files into CSS files.
+* In Karak dashboard we decided to use a node application by using npm to compile the SASS and LESS files into CSS files.
 The following commands should be be used in the terminal.
   
   - Install the grunt CLI globally by running this command `npm install -g grunt-cli` using the terminal.
@@ -270,9 +278,9 @@ Our Forms feature provides a variety of customized forms elements such as input 
 
 ### Input Fields
 
-Blue Dashboard provide a collection of input fields that you can easily use in your website.
+Karak Dashboard provide a collection of input fields that you can easily use in your website.
 
-All you need to do is to include Blue Dashboard customized CSS file in addition to <a href="http://materializecss.com/">materializecss</a> framework JS file.
+All you need to do is to include Karak Dashboard customized CSS file in addition to <a href="http://materializecss.com/">materializecss</a> framework JS file.
 
 > To use our customized input fields:
 
@@ -329,7 +337,7 @@ $('#no-params').ionRangeSlider();
 ```
 ### Toggles
 
-If you wanted to use the slide toggles all you need to do is include Blue Dashboard styles file.
+If you wanted to use the slide toggles all you need to do is include Karak Dashboard styles file.
 
 
 You can also change the color of the toggle by using one of the colors classes such as: <br>
@@ -385,10 +393,10 @@ $('.select2-init-images').select2({
 
 ### Checkboxes
 
-In Blue Dashboard you can find many checkboxes styles such as colored checkboxes, circled checkboxes and yes/no checkboxes.
+In Karak Dashboard you can find many checkboxes styles such as colored checkboxes, circled checkboxes and yes/no checkboxes.
 
 
-In order to use the colored checkboxes all you need to do is to include Blue Dashboard styles file.<br>
+In order to use the colored checkboxes all you need to do is to include Karak Dashboard styles file.<br>
 
 As for the yes/no checkboxes you need to include a JS file for the <a href="https://vsn4ik.github.io/bootstrap-checkbox/">Bootstrap checkbox</a> library as shown in the example. <br>
 
@@ -421,7 +429,7 @@ $('#toggleCheckbox-yes-green').checkboxpicker();
 ```
 
 ### Datepickers
-Blue Dashboard provides many datepickers styles including range datepickers, simple datepickers and advanced datepickers.
+Karak Dashboard provides many datepickers styles including range datepickers, simple datepickers and advanced datepickers.
 
 In order to use range datepickers you need to include the <a href="http://www.daterangepicker.com/">date range picker library </a> as shown in the example.
 
@@ -681,13 +689,13 @@ $('#summernote').summernote({
 
 The form wizard form is an easier way to gather information and easier for the user to fill the form that way.
 
-Blue dashboard wizard is based on the <a href="http://vinceg.github.io/twitter-bootstrap-wizard/">twitter bootstrap wizard </a> library so you will have to include the JS file of that library as shown in the example.
+Karak dashboard wizard is based on the <a href="http://vinceg.github.io/twitter-bootstrap-wizard/">twitter bootstrap wizard </a> library so you will have to include the JS file of that library as shown in the example.
 
-* Blue dashbaord form wizard uses 2 libraries by default :
+* Karak dashbaord form wizard uses 2 libraries by default :
   - Select2 library
   - Sweet alert library 
 
-So in order to use the wizard you will need Blue dashboard style file in addition to these 2 libraries files.
+So in order to use the wizard you will need Karak dashboard style file in addition to these 2 libraries files.
 
 <aside class="notice">
 Don't forget to include the JS file of the form wizard itself as shown in the example.
@@ -720,7 +728,7 @@ Don't forget to include the JS file of the form wizard itself as shown in the ex
   - Inbox page.
   - Compose page.
 
-* In order to use those pages all you need to do is to include the files as shown in the example and copy the source from it's page in the blue dashboard main directory and paste it into your project.
+* In order to use those pages all you need to do is to include the files as shown in the example and copy the source from it's page in the Karak dashboard main directory and paste it into your project.
 
 ```html
 <!-- INBOX PAGE-->
@@ -764,11 +772,11 @@ Don't forget to include the JS file of the form wizard itself as shown in the ex
 
 UI Elements are a very important utility to use in your website and they are very useful and give a very nice addition to any website.
 
-In Blue Dashboard we gathered a set of elements that you will find useful and very easy to use.
+In Karak Dashboard we gathered a set of elements that you will find useful and very easy to use.
 
 ## Notifications
 
-You can use Blue Dashboard notifications in your website very easily all you have to do is include the blue dashboard styles file and :
+You can use Karak Dashboard notifications in your website very easily all you have to do is include the Karak dashboard styles file and :
 
 - Choose which of the listed libraries you wish to use. <br>
 
@@ -871,7 +879,7 @@ toastr['info']('Bottom Right!');
 
 ## Icons
 
-Blue Dashboard include the popular font icons libraries, <a target href="http://fontawesome.io/">fontawesome</a> and <a href="http://getbootstrap.com/components/">glyphicons</a>.
+Karak Dashboard include the popular font icons libraries, <a target href="http://fontawesome.io/">fontawesome</a> and <a href="http://getbootstrap.com/components/">glyphicons</a>.
 
 <img src="images/icons.png">
 
@@ -911,8 +919,8 @@ Just include the icon class like the HTML sample to use it in the dashboard.
 The modals we use are extracted from <a href="https://v4-alpha.getbootstrap.com/components/modal/"> bootstrap framework modals </a> with a little bit of customizing on them.
 
 * All you have to do is :
- - Include the blue dashboard style file and initialize the modal in the HTML file.
- - Use the Blue dashboard customization classes such as `.right` to use the right side modal.
+ - Include the Karak dashboard style file and initialize the modal in the HTML file.
+ - Use the Karak dashboard customization classes such as `.right` to use the right side modal.
 
 * Some modals don't require customization classes such as the flat modal as shown in the example.
 
@@ -975,10 +983,10 @@ The modals we use are extracted from <a href="https://v4-alpha.getbootstrap.com/
 
 ## Buttons
 
-In Blue dashboard we used the same <a href="http://getbootstrap.com/css/#buttons">buttons in bootstrap</a> in addition to our own touch.
+In Karak dashboard we used the same <a href="http://getbootstrap.com/css/#buttons">buttons in bootstrap</a> in addition to our own touch.
 
-* If you wanted to use the Blue dashboard buttons all you need to do is :
-   - Include the Blue dashboard style file.
+* If you wanted to use the Karak dashboard buttons all you need to do is :
+   - Include the Karak dashboard style file.
    - Use the customized classes as shown in the example.
 
 * Please note that if you wanted to use the buttons with hover you need to include the 
@@ -1045,13 +1053,13 @@ Loaders could be used in many places but two main functionalities are when the u
   - Same as the Progress circles above you should include the ProgressBar.js Javascript file.
 
 * Placeholder loader.
-  - This famous loader is used as stand alone plugin meaning that it doesn't need any libraries, all you need to do is to include the blue dashboard Style file and use it just like the example does.
+  - This famous loader is used as stand alone plugin meaning that it doesn't need any libraries, all you need to do is to include the Karak dashboard Style file and use it just like the example does.
 
 * Indeterminate loaders.
   - To use any of the indeterminate loaders all you need to do is to include the dashboard style file as before and do as the example shows.
 
 <aside class="notice">
-Please note that in blue dashboard the loaders are displayed and hidden using Jquery.
+Please note that in Karak dashboard the loaders are displayed and hidden using Jquery.
 </aside>
 
 ```html
@@ -1143,7 +1151,7 @@ bar.animate(1.0);
 
 <a href="http://materializecss.com/cards.html">Cards</a> are a feature extracted from  <a href="http://materializecss.com/">Materialize framework </a>to display information in a new way.
 
-You can use blue dashboard customized cards by including the blue dashboard style file in addition to the MaterializeCSS JS file and use the cards as shown in th example.
+You can use Karak dashboard customized cards by including the Karak dashboard style file in addition to the MaterializeCSS JS file and use the cards as shown in th example.
 
 
 
@@ -1206,9 +1214,9 @@ You can use blue dashboard customized cards by including the blue dashboard styl
 
 ## Lists
 
-Lists are an easy tool to use. Based on bootstrap lists blue dashboard lists provide a variety of options to use when listing your information.
+Lists are an easy tool to use. Based on bootstrap lists Karak dashboard lists provide a variety of options to use when listing your information.
 
-All you need to do to start using blue dashboard's lists is to include the blue dashboard styles file.
+All you need to do to start using Karak dashboard's lists is to include the Karak dashboard styles file.
 
 
 <aside class="notice">
@@ -1323,9 +1331,9 @@ All you have to do is to put the class of the animation you want such as `.hvr-g
 
 ## Panels
 
-In Blue dashboard panels you can use many types of panels such as collapsing panels and full screen panels or even draggable panels.
+In Karak dashboard panels you can use many types of panels such as collapsing panels and full screen panels or even draggable panels.
 
-All you need to do is to include the blue dashboard style file and the panels JS file.
+All you need to do is to include the Karak dashboard style file and the panels JS file.
 
 
 <aside class="notice">
@@ -1402,7 +1410,7 @@ Please note that if you want to use the drag and drop panel you need to include 
 
 You can use menus to categorize the information you want to display.
 
-To use blue dashboard costume menus all you need to do is include the blue dashboard style file and after that proceed as it shows in the example.
+To use Karak dashboard costume menus all you need to do is include the Karak dashboard style file and after that proceed as it shows in the example.
 
 ```html
 <!-- Side Menu -->
@@ -1416,7 +1424,7 @@ To use blue dashboard costume menus all you need to do is include the blue dashb
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Blue Dashboard</a>
+            <a class="navbar-brand" href="#">Karak Dashboard</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -1498,7 +1506,7 @@ To use blue dashboard costume menus all you need to do is include the blue dashb
 
 Tabs gives a very nice display of data in your website.
 
-In order to use this utility you will have to include blue dashboard style file in addition to the tabs JS file. 
+In order to use this utility you will have to include Karak dashboard style file in addition to the tabs JS file. 
 
 ```html
 
@@ -1572,12 +1580,12 @@ In order to use this utility you will have to include blue dashboard style file 
 
 # Calendar
 
-Blue Dashboard include a JavaScript event calendar using <a target="_blank" href="https://fullcalendar.io/">fullcalendar</a> library.
+Karak Dashboard include a JavaScript event calendar using <a target="_blank" href="https://fullcalendar.io/">fullcalendar</a> library.
 We customized the UI design for this view and its modals to be user friendly and easy to use. 
 
 <img src="images/Pasted image at 2017_03_23 12_49 PM.png">
 
-* In order to use the blue dashboard customized calendar you will have to include blue dashboard's style file in addition to the calendar files as shown in the example.
+* In order to use the Karak dashboard customized calendar you will have to include Karak dashboard's style file in addition to the calendar files as shown in the example.
 
 ```html
 
@@ -1605,7 +1613,7 @@ We customized the UI design for this view and its modals to be user friendly and
 
 Charts is a very effective way to display statistics.
 
-* In blue Dashboard we used a couple of libraries to display charts: 
+* In Karak Dashboard we used a couple of libraries to display charts: 
   - <a href="http://www.highcharts.com/">HIGH CHARTS. </a>
   - <a href="http://www.chartjs.org/">CHARTS JS. </a>
 
@@ -1727,10 +1735,10 @@ var myLineChart = new Chart(ctx4, {
 
 ## Basic Tables
 
-Blue Dashboard use <a target="_blank" href="http://getbootstrap.com/css/#tables">Bootstrap</a> tables with custom design.
+Karak Dashboard use <a target="_blank" href="http://getbootstrap.com/css/#tables">Bootstrap</a> tables with custom design.
 You can use any custom class with <code>table</code> tag to get the style.
 
-* In order to use the basic tables all you need to do is to include the blue dashboard style file.
+* In order to use the basic tables all you need to do is to include the Karak dashboard style file.
 
 ### Users Table Style
 
@@ -1893,10 +1901,10 @@ You can change the table head color by adding any color class (eg:<code>.info-mi
 
 ## Data Tables
 
-Blue Dashboard uses <a target="_blank" href="https://datatables.net/">DataTables</a> plug-in with custom design.
+Karak Dashboard uses <a target="_blank" href="https://datatables.net/">DataTables</a> plug-in with custom design.
 This plug-in include many features (search, sort, pagination, child rows, copy, export and more).
 
-In order to use our customized Datatable you will need to include blue dashboard's style file in addition to the library files as shown in the example.
+In order to use our customized Datatable you will need to include Karak dashboard's style file in addition to the library files as shown in the example.
 
 <aside class="notice">
 You can read DataTables <a href="https://datatables.net/examples/index">documentation</a> to learn about plug-in options and features.
@@ -2044,7 +2052,7 @@ You can manage your personal banking accounts using the account management view.
 
 ## Chat View
 
-Blue Dashboard include a full chat application view with many features like create a new channel or start a new direct conversation with any user, you can also send many types of messages (text, image, youtube video..)
+Karak Dashboard include a full chat application view with many features like create a new channel or start a new direct conversation with any user, you can also send many types of messages (text, image, youtube video..)
 
 
 <img src="images/chat_view.png">
@@ -2057,7 +2065,7 @@ Blue Dashboard include a full chat application view with many features like crea
 
 <img src="images/direct_message.png">
 
-* All you need to do to use this page is to include the blue dashboard style file in addition to the chat JS file as shown in the example.
+* All you need to do to use this page is to include the Karak dashboard style file in addition to the chat JS file as shown in the example.
 
 ```html
 <!-- Chat JS file -->
@@ -2068,7 +2076,7 @@ Blue Dashboard include a full chat application view with many features like crea
 
 ## Social
 
-You can use Blue Dashboard social view for any social timeline. This view include a many types of posts (text, image, video, gif).
+You can use Karak Dashboard social view for any social timeline. This view include a many types of posts (text, image, video, gif).
 <br><br>
 <img src="images/social.png">
 
@@ -2171,7 +2179,7 @@ $('#container').highcharts('Map', {
 
 This map created using <a href="https://developers.google.com/maps/documentation/javascript/tutorial" target="_blank">google maps javascript API</a>.
 
-* All you need to do is to include blue dashboard's style file in addition to the google map style file and the google api library file.
+* All you need to do is to include Karak dashboard's style file in addition to the google map style file and the google api library file.
 
 <img src="images/google_map.png" />
 
@@ -2221,8 +2229,8 @@ map = new google.maps.Map(document.getElementById('map'), {
 
 # Invoice
 
-Blue Dashboard include invoice view with save and print feature.
+Karak Dashboard include invoice view with save and print feature.
 
-* All you have to do to use this feature is to include the blue dashboard style file and copy the source code to your HTML page.
+* All you have to do to use this feature is to include the Karak dashboard style file and copy the source code to your HTML page.
 
 <img src="images/invoice.png">
