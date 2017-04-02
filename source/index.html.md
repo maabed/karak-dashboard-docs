@@ -120,16 +120,10 @@ Those file are mandatory for the use of the dashboard features.
 
 In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it through a Gruntfile.
 
+### Getting started 
+
 In Blue dashboard we decided to use a node application by using npm.
 When creating a node application you will need a file called package.json to manage local npm packages.'
-
-* package.json is the file that contains the project dependences such as Grunt, less and sass. To create package.json file you need to initialize nodejs project to do so:
-
-  - `npm init` to initialize the nodejs project, you can run this in same project directory. go through the preparations steps.
-  - Now the package.json file is created you can add the desired package by adding it's name to the `devDependencies` as shown in th example.
-  - Install the desired package as shown un the installation part bellow.
-  - `npm install` 
-  - Fill in the required data in the json file as shown in the example
 
 ```javascript
 {
@@ -162,6 +156,23 @@ When creating a node application you will need a file called package.json to man
 
 ```
 
+* package.json is the file that contains the project dependences such as Grunt, less and sass. To create package.json file you need to initialize nodejs project to do so:
+
+  - You should have <a href="https://nodejs.org/download/">Node JS </a> to run the installation commands using npm.
+
+  - `npm init` to initialize the nodejs project, you can run this in same project directory. go through the preparations steps.
+
+  - Fill in the required data in the json file as shown in the example.
+
+  - In order to compile the less and sass you will need to add the `grunt-contrip-less` and `grunt-contrip-sass` to the package.json as shown in the example.
+
+  - Installing the CLI globally by running this command `npm install -g grunt-cli`.
+
+  - Locate `gruntfile.js` & `package.json` in the Blue Dashboard folder using the terminal.
+  
+  - Go to your project directory then run the command `npm install` to install the packages you added in the package.json file.
+
+
 * package.json file contains information such as :
 
   - name: the current directory name
@@ -175,16 +186,10 @@ When creating a node application you will need a file called package.json to man
   - bugs: info from the current directory, if present
   - homepage: info from the current directory, if present
 
-
 <aside class="success">
 Please note that the node application is not the only way that could be used.
 </aside>
 
-* Installation 
-  - You should have <a href="https://nodejs.org/download/">Node JS </a> to run the installation commands using npm.
-  - Installing the CLI globally by running this command `npm install -g grunt-cli`.
-  - Locate `gruntfile.js` & `package.json` in the Blue Dashboard folder.
-  - Go to your project directory then run the command `npm install`.
 
 * Now you can use the grunt commands to compile your LESS and SASS files:
 
