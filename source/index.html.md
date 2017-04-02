@@ -123,10 +123,12 @@ In one word: automation. The less work you have to do when performing repetitive
 In Blue dashboard we decided to use a node application by using npm.
 When creating a node application you will need a file called package.json to manage local npm packages.'
 
-* package.json is the file that contains the project dependences such as Grunt, less and sass. To create package.json file :
+* package.json is the file that contains the project dependences such as Grunt, less and sass. To create package.json file you need to initialize nodejs project to do so:
 
-  - `npm init`
-  - `npm install`
+  - `npm init` to initialize the nodejs project, you can run this in same project directory. go through the preparations steps.
+  - Now the package.json file is created you can add the desired package by adding it's name to the `devDependencies` as shown in th example.
+  - Install the desired package as shown un the installation part bellow.
+  - `npm install` 
   - Fill in the required data in the json file as shown in the example
 
 ```javascript
