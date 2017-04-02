@@ -116,14 +116,16 @@ Those file are mandatory for the use of the dashboard features.
 
 ```
 
-## Grunt
+## <a href="https://gruntjs.com/getting-started">Grunt</a>
 
 In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it through a Gruntfile.
 
 ### Getting started 
 
-In Blue dashboard we decided to use a node application by using npm.
+In Blue dashboard we decided to use a node application by using <a href="https://www.npmjs.com/">npm</a>.
 When creating a node application you will need a file called package.json to manage local npm packages.'
+
+> package.json file
 
 ```javascript
 {
@@ -153,27 +155,72 @@ When creating a node application you will need a file called package.json to man
   }
 }
 
+```
+> Gruntfile
+
+```javascript
+
+module.exports = function(grunt) {
+  grunt.loadNpmTasks('grunt-contrib-less');  //Load grunt less task
+  grunt.loadNpmTasks('grunt-contrib-sass');  //Load grunt sass task
+  grunt.loadNpmTasks('grunt-contrib-watch'); //Load grunt watch task
+  // Project configuration.
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+
+    sass: {
+      dist: {
+        files: {
+          'assets/css/dist_file': 'assets/scss/source_file'  //Compile SCSS file
+        }
+      }
+    },
+    less: {
+      development: {
+        options: {
+          paths: ['assets/less']
+        },
+        files: {
+          'assets/css/dist_file': 'assets/less/source_file' //Compile LESS file
+        }
+      }
+    },
+    watch:{
+      less:{
+        files:['assets/less/your_less_file.less'], //monitor LESS files for changes
+        tasks:['less']
+      },
+    }
+  });
+};
 
 ```
 
-* package.json is the file that contains the project dependences such as Grunt, less and sass. To create package.json file you need to initialize nodejs project to do so:
+### installation
 
-  - You should have <a href="https://nodejs.org/download/">Node JS </a> to run the installation commands using npm.
-
-  - `npm init` to initialize the nodejs project, you can run this in same project directory. go through the preparations steps.
-
-  - Fill in the required data in the json file as shown in the example.
-
-  - In order to compile the less and sass you will need to add the `grunt-contrip-less` and `grunt-contrip-sass` to the package.json as shown in the example.
-
-  - Installing the CLI globally by running this command `npm install -g grunt-cli`.
-
-  - Locate `gruntfile.js` & `package.json` in the Blue Dashboard folder using the terminal.
+* In Blue dashboard we decided to use a node application by using npm to compile the SASS and LESS files into CSS files.
+The following commands should be be used in the terminal.
   
-  - Go to your project directory then run the command `npm install` to install the packages you added in the package.json file.
+  - Install the grunt CLI globally by running this command `npm install -g grunt-cli` using the terminal.
+  - To initialize the nodejs project, you can run `npm init` in the same project directory, then go through the preparations steps.
+  - Create Gruntfile manually in your project directory and keep it empty.
+  - Install the npm desired packages:
+      - `npm install grunt --save-dev`
+      - `npm install grunt-contrib-less --save-dev`
+      - `npm install grunt-contrib-sass --save-dev`
+      - `npm install grunt-contrib-watch --save-dev`
+  - You will notice these packages being added under devDependencies in package.json.
+  - In the gruntfile add the following code as shown in the example.
+  - Now you can use the grunt commands to compile your LESS and SASS files:
+      - Use `Grunt less` to compile less files.
+      - Use `Grunt sass` to compile sass files.
+      - Use `Grunt watch` to keep track of the less or sass files.
 
+<aside class="success">
+Grunt watch is used to keep track of your less or sass files to compile them immediately when saving changes to the file. 
+</aside>
 
-* package.json file contains information such as :
+* package.json file (example on the right) contains information such as :
 
   - name: the current directory name
   - version: always 1.0.0
@@ -187,19 +234,9 @@ When creating a node application you will need a file called package.json to man
   - homepage: info from the current directory, if present
 
 <aside class="success">
-Please note that the node application is not the only way that could be used.
+Please note that the node application is not the only way that could be used, for example you can use <a href="http://koala-app.com/">Koala</a> to compile SASS.
 </aside>
 
-
-* Now you can use the grunt commands to compile your LESS and SASS files:
-
-  - `Grunt less`
-  - `Grunt sass`
-  - `Grunt watch`
-
-<aside class="success">
-Grunt watch is used to keep track of your less or sass files to compile them immediately when saving changes to the file. 
-</aside>
 
 ## LESS
 
