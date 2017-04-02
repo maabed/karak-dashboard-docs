@@ -24,6 +24,58 @@ This Documentation will help you to use the dashboard effectively.
 
 You can use blue dashboard to add multiple features and pages in your website, all you have to do is to <a href="https://github.com/new-release/Blue-dashboard">download our dashboard or fork it from github</a>.
 
+### Features
+
+The features provided by the Blue dashboard:
+
+  * Dashboard
+
+  * Forms
+    - Forms Elements
+    - Forms Wizard
+
+  * Charts
+
+  * Email
+
+  * UI Elements
+    - Icons
+    - Colors
+    - Buttons
+    - Notifications
+    - Modals
+    - Tabs
+    - Cards
+    - Loading & progress
+    - Panels
+    - Lists
+    - Menus
+    - Hover
+
+  * Calendar
+
+  * App Views 
+    - Account management
+    - Landing page
+    - Chat View
+    - Social
+
+  * Tables
+    - Basic table
+    - Data table
+
+  * Maps
+    - Vector maps
+    - Google maps
+
+  * Extra
+    - Invoice
+    - 404 page
+    - 500 page
+    - Login & registration 
+    - Lock screen
+    - Tour
+
 ### Configs 
 
 Blue dashboard uses a variety of plugins and libraries so in order for you to make use of the feature in your website you will need to include some files first.
@@ -68,11 +120,67 @@ Those file are mandatory for the use of the dashboard features.
 
 In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it through a Gruntfile.
 
-Blue Dashboard used grunt to make it easier for any user to compile LESS and SASS files.
+In Blue dashboard we decided to use a node application by using npm.
+When creating a node application you will need a file called package.json to manage local npm packages.'
+
+* package.json is the file that contains the project dependences such as Grunt, less and sass. To create package.json file :
+
+  - `npm init`
+  - `npm install`
+  - Fill in the required data in the json file as shown in the example
+
+```javascript
+{
+  "name": "my_package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashleygwilliams/my_package.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashleygwilliams/my_package/issues"
+  },
+  "homepage": "https://github.com/ashleygwilliams/my_package",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-sass": "^1.0.0 ",
+    "grunt-contrib-watch": "^1.0.0"
+
+  }
+}
+
+
+```
+
+* package.json file contains information such as :
+
+  - name: the current directory name
+  - version: always 1.0.0
+  - description: info from the readme, else an empty string ""
+  - main: always index.js
+  - scripts: by default creates a empty test script
+  - keywords: empty
+  - author: empty
+  - license: ISC
+  - bugs: info from the current directory, if present
+  - homepage: info from the current directory, if present
+
+
+<aside class="success">
+Please note that the node application is not the only way that could be used.
+</aside>
 
 * Installation 
-  - You must have <a href="https://nodejs.org/download/">Node JS </a> to run the installation commands using npm.
-  - Installing the CLI globally using by running this command `npm install -g grunt-cli`.
+  - You should have <a href="https://nodejs.org/download/">Node JS </a> to run the installation commands using npm.
+  - Installing the CLI globally by running this command `npm install -g grunt-cli`.
   - Locate `gruntfile.js` & `package.json` in the Blue Dashboard folder.
   - Go to your project directory then run the command `npm install`.
 
@@ -95,7 +203,7 @@ Less is a CSS pre-processor, meaning that it extends the CSS language, adding fe
   - Utilities - Contains the features provided by the dashboard such as inputs, cards etc.
   - Views - Contains the dashboard's pages design.
   - Base.less - Contains the basic and most general styles of the dashboard.
-  - Imports.less - Is probably the most important file in the directory for that fact that it contains the imports of all the LESS files.
+  - Imports.less - Is probably the most important file in the directory for the fact that it contains the imports of all the LESS files.
   - main.less - Contains a less general styles than the base.less
 
 
@@ -108,17 +216,17 @@ Sass is an extension of CSS that adds power and elegance to the basic language. 
   - Utilities - Contains the features provided by the dashboard such as inputs, cards etc.
   - Views - Contains the dashboard's pages design.
   - Base.scss - Contains the basic and most general styles of the dashboard.
-  - Imports.scss - Is probably the most important file in the directory for that fact that it contains the imports of all the SCSS files.
+  - Imports.scss - Is probably the most important file in the directory for the fact that it contains the imports of all the SCSS files.
   - main.scss - Contains a less general styles than the base.less
 
 # Forms
 
 ## Form Elements
-Our Forms utility provides a variety of customized forms elements such as input fields, check boxes, date pickers, etc.
+Our Forms feature provides a variety of customized forms elements such as input fields, check boxes, date pickers, etc.
 
 ### Input Fields
 
-Blue Dashboard provide a collection of input fields such that you can easily use in your website.
+Blue Dashboard provide a collection of input fields that you can easily use in your website.
 
 All you need to do is to include Blue Dashboard customized CSS file in addition to <a href="http://materializecss.com/">materializecss</a> framework JS file.
 
@@ -149,7 +257,7 @@ All you need to do is to include Blue Dashboard customized CSS file in addition 
 ```
 ### Ranges
 
-In order to use the Ranges slider you will have to include two CSS files the first one defines the basic look for the slider and the second one for the theme you choose and the JS file for the library.
+In order to use the Ranges slider you will have to include two CSS files the first one defines the basic look for the slider and the second one for the theme you choose in addition to the JS file for the library.
 
 
 
@@ -195,7 +303,7 @@ You can also change the color of the toggle by using one of the colors classes s
 ```
 ### Dropdown Select
 
-The dropdown selects are a very common input tool so in order to use them you should include the link for the Select2 library CSS file and JS file.
+The dropdown selects are a very common input tool so in order to use them you should include the link for the Select2 CSS file and JS file.
 
 The dropdown select includes variety of features such as: <br>
 <code>.select2-init-single</code> <br>
@@ -238,7 +346,7 @@ In Blue Dashboard you can find many checkboxes styles such as colored checkboxes
 
 In order to use the colored checkboxes all you need to do is to include Blue Dashboard styles file.<br>
 
-As for the yes/no checkboxes you need to include a JS file for the <a href="https://vsn4ik.github.io/bootstrap-checkbox/">Bootstrap checkbox</a> library. <br>
+As for the yes/no checkboxes you need to include a JS file for the <a href="https://vsn4ik.github.io/bootstrap-checkbox/">Bootstrap checkbox</a> library as shown in the example. <br>
 
 <aside class="notice">
 Don't forget to initialize the yes/no checkbox in the javascript 
@@ -529,9 +637,9 @@ $('#summernote').summernote({
 
 The form wizard form is an easier way to gather information and easier for the user to fill the form that way.
 
-Blue dashboard wizard is based on the <a href="http://vinceg.github.io/twitter-bootstrap-wizard/">twitter bootstrap wizard </a> library so you will have to include the JS file of that library.
+Blue dashboard wizard is based on the <a href="http://vinceg.github.io/twitter-bootstrap-wizard/">twitter bootstrap wizard </a> library so you will have to include the JS file of that library as shown in the example.
 
-* Blue dashbaord form wizard uses 2 libraries in default :
+* Blue dashbaord form wizard uses 2 libraries by default :
   - Select2 library
   - Sweet alert library 
 
@@ -618,23 +726,23 @@ In Blue Dashboard we gathered a set of elements that you will find useful and ve
 
 You can use Blue Dashboard notifications in your website very easily all you have to do is include the blue dashboard styles file and :
 
--Choose which of the listed libraries you wish to use. <br>
+- Choose which of the listed libraries you wish to use. <br>
 
 1- Bootstrap alert. <br>
 2- Sweet alert. <br>
 3- Toastr alert.
 
--Include their files. <br>
+- Include their files. <br>
 
 1- Bootstrap alert. <br>
 
- * Use the .alert class to initialize the bootstrap alert in addition to the color classes such as :
+ * Use the `.alert` class to initialize the bootstrap alert in addition to the color classes such as :
   - `.alert-success` & `.success-lighter`.
 
 2- Sweet alert <br>
 
 
- * Initialize the sweet alert in the JS using `swal("Message")` function which can include many options. such as :
+ * Initialize the sweet alert in the JS using `swal("Message")` function which can include many options such as :
   - `type: 'warning'`, to determine the type of the alert.
 
 
@@ -756,7 +864,7 @@ Just include the icon class like the HTML sample to use it in the dashboard.
 
 ## Modals
 
-The modal we use are extracted from <a href="https://v4-alpha.getbootstrap.com/components/modal/"> bootstrap framework modals </a> with a little bit of customizing on them.
+The modals we use are extracted from <a href="https://v4-alpha.getbootstrap.com/components/modal/"> bootstrap framework modals </a> with a little bit of customizing on them.
 
 * All you have to do is :
  - Include the blue dashboard style file and initialize the modal in the HTML file.
@@ -878,7 +986,7 @@ In Blue dashboard we used the same <a href="http://getbootstrap.com/css/#buttons
 
 ## Loading
 
-Loaders could be used in many places but two main functionalities are that they are used when the process the user is waiting for is determinate or indeterminate.
+Loaders could be used in many places but two main functionalities are when the user is waiting for a determinate  or indeterminate process.
 
 * Progress bars and circles are used in determinate operations.
 
@@ -887,10 +995,10 @@ Loaders could be used in many places but two main functionalities are that they 
 * Progress circles. 
   - These progress shapes were extracted from the <a href="https://kimmobrunfeldt.github.io/progressbar.js/">PROGRESS BAR.JS</a> 
   - In order to use them you need to include ProgressBar.js Javascript file. <br>
-  - You can manipulate and play with the progress circle options as you like using the option provided by the library.
+  - You can manipulate and play with the progress circle options as you like using the options provided by the library.
 
 * Progress bars.
-  - Same as the Progress circles above you should include the include ProgressBar.js Javascript file.
+  - Same as the Progress circles above you should include the ProgressBar.js Javascript file.
 
 * Placeholder loader.
   - This famous loader is used as stand alone plugin meaning that it doesn't need any libraries, all you need to do is to include the blue dashboard Style file and use it just like the example does.
@@ -989,9 +1097,9 @@ bar.animate(1.0);
 
 ## Cards
 
-<a href="http://materializecss.com/cards.html">Cards</a> are a utility extracted from  <a href="http://materializecss.com/">Materialize framework </a>to display information in a new way.
+<a href="http://materializecss.com/cards.html">Cards</a> are a feature extracted from  <a href="http://materializecss.com/">Materialize framework </a>to display information in a new way.
 
-You can use blue dashboard customized cards by including the blue dashboard style file in addition to thematerialize css JS file and use the cards as shown in th example.
+You can use blue dashboard customized cards by including the blue dashboard style file in addition to the MaterializeCSS JS file and use the cards as shown in th example.
 
 
 
@@ -1054,7 +1162,7 @@ You can use blue dashboard customized cards by including the blue dashboard styl
 
 ## Lists
 
-Lists are a easy tool to use. Based on bootstrap lists blue dashboard lists provide a variety of options to use when listing your information.
+Lists are an easy tool to use. Based on bootstrap lists blue dashboard lists provide a variety of options to use when listing your information.
 
 All you need to do to start using blue dashboard's lists is to include the blue dashboard styles file.
 
@@ -1421,7 +1529,7 @@ In order to use this utility you will have to include blue dashboard style file 
 # Calendar
 
 Blue Dashboard include a JavaScript event calendar using <a target="_blank" href="https://fullcalendar.io/">fullcalendar</a> library.
-We customize the UI design for this view and its modals to be user friendly and easy to use. 
+We customized the UI design for this view and its modals to be user friendly and easy to use. 
 
 <img src="images/Pasted image at 2017_03_23 12_49 PM.png">
 
@@ -1457,7 +1565,7 @@ Charts is a very effective way to display statistics.
   - <a href="http://www.highcharts.com/">HIGH CHARTS. </a>
   - <a href="http://www.chartjs.org/">CHARTS JS. </a>
 
-All you need to do to use them is including the library JS file and then initialize the chart on a `div` in the html page.
+All you need to do to use them is to include the library JS file and then initialize the chart on a `div` in the html page.
 
 ```html
 <!-- Highcharts library -->
@@ -1582,7 +1690,7 @@ You can use any custom class with <code>table</code> tag to get the style.
 
 ### Users Table Style
 
-You juat need to add <code>.users-table</code> class to the table tag to git this style.
+You juat need to add <code>.users-table</code> class to the table tag to get this style.
 
 <img src="images/users_table.png"/>
 
@@ -1737,11 +1845,11 @@ Just apply Dashed class(<code>.dashed-row-style</code>) to make the table Dashed
 ```
 ### Colored Table
 
-You can change the table head color using add any color class (eg:<code>.info-mid</code>).
+You can change the table head color by adding any color class (eg:<code>.info-mid</code>).
 
 ## Data Tables
 
-Blue Dashboard use <a target="_blank" href="https://datatables.net/">DataTables</a> plug-in with custom design.
+Blue Dashboard uses <a target="_blank" href="https://datatables.net/">DataTables</a> plug-in with custom design.
 This plug-in include many features (search, sort, pagination, child rows, copy, export and more).
 
 In order to use our customized Datatable you will need to include blue dashboard's style file in addition to the library files as shown in the example.
@@ -1892,7 +2000,7 @@ You can manage your personal banking accounts using the account management view.
 
 ## Chat View
 
-Blue Dashboard include a full chat application view with many features like create a new channels or start a new direct conversation with any user, also you can send many types of messages (text, image, youtube video..)
+Blue Dashboard include a full chat application view with many features like create a new channel or start a new direct conversation with any user, you can also send many types of messages (text, image, youtube video..)
 
 
 <img src="images/chat_view.png">
@@ -2074,76 +2182,3 @@ Blue Dashboard include invoice view with save and print feature.
 * All you have to do to use this feature is to include the blue dashboard style file and copy the source code to your HTML page.
 
 <img src="images/invoice.png">
-
-# The Dashboard
-
-The features provided by the Blue dashboard:
-
-  * Dashboard
-
-  * Forms
-    - Forms Elements
-    - Forms Wizard
-
-  * Charts
-
-  * Email
-
-  * UI Elements
-    - Icons
-    - Colors
-    - Buttons
-    - Notifications
-    - Modals
-    - Tabs
-    - Cards
-    - Loading & progress
-    - Panels
-    - Lists
-    - Menus
-    - Hover
-
-  * Calendar
-
-  * App Views 
-    - Account management
-    - Landing page
-    - Chat View
-    - Social
-
-  * Tables
-    - Basic table
-    - Data table
-
-  * Maps
-    - Vector maps
-    - Google maps
-
-  * Extra
-    - Invoice
-    - 404 page
-    - 500 page
-    - Login & registration 
-    - Lock screen
-    - Tour
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
