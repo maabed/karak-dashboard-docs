@@ -76,6 +76,10 @@ The features provided by the Karak dashboard:
     - Lock screen
     - Tour
 
+<aside class="success">
+All the above pages are also supported in RTL (Right-to-Left) format.
+</aside>
+
 ### Configs 
 
 Karak dashboard uses a variety of plugins and libraries so in order for you to make use of the feature in your website you will need to include some files first.
@@ -125,7 +129,7 @@ In one word: automation. The less work you have to do when performing repetitive
 In Karak dashboard we decided to use a node application by using <a href="https://www.npmjs.com/">npm</a>.
 When creating a node application you will need a file called package.json to manage local npm packages.'
 
-> package.json file
+> package.json -> Click Javascript tab to view file
 
 ```javascript
 {
@@ -156,7 +160,7 @@ When creating a node application you will need a file called package.json to man
 }
 
 ```
-> Gruntfile
+> Gruntfile -> Click Javascript tab to view file
 
 ```javascript
 
@@ -206,44 +210,21 @@ module.exports = function(grunt) {
 
 ### installation
 
-* In Karak dashboard we decided to use a node application by using npm to compile the SASS and LESS files into CSS files.
-The following commands should be be used in the terminal.
+* In Karak dashboard we decided to use a node application by using npm to compile the SASS and LESS files into CSS files. We already did the heavy lifting of configuring Grunt, so this theme is shipped with Gruntfile.js, which means you just have to run following commands in the terminal.
   
   - Install the grunt CLI globally by running this command `npm install -g grunt-cli` using the terminal.
-  - To initialize the nodejs project, you can run `npm init` in the same project directory, then go through the preparations steps.
-  - Create Gruntfile manually in your project directory and keep it empty.
-  - Install the npm desired packages:
-      - `npm install grunt --save-dev`
-      - `npm install grunt-contrib-less --save-dev`
-      - `npm install grunt-contrib-sass --save-dev`
-      - `npm install grunt-contrib-watch --save-dev`
-  - You will notice these packages being added under devDependencies in package.json.
-  - In the gruntfile add the following code as shown in the example.
+  - You will notice that all the devDependencies are added in package.json.
+  - To install these devDependencies we used in Grunt, you can run `npm install` in the same project directory.
+  - Also you will notice that all the Grunt configurations are added in Gruntfile.js.
   - Now you can use the grunt commands to compile your LESS and SASS files:
-      - Use `Grunt less` to compile less files.
-      - Use `Grunt sass` to compile sass files.
-      - Use `Grunt watch` to keep track of the less or sass files.
+      - `grunt scsstocss` to compile sass files.
+      - `grunt lesstocss` to compile less files.
 
 <aside class="success">
 Grunt watch is used to keep track of your less or sass files to compile them immediately when saving changes to the file. 
 </aside>
-
-* package.json file (example on the right) contains information such as :
-
-  - name: the current directory name
-  - version: always 1.0.0
-  - description: info from the readme, else an empty string ""
-  - main: always index.js
-  - scripts: by default creates a empty test script
-  - keywords: empty
-  - author: empty
-  - license: ISC
-  - bugs: info from the current directory, if present
-  - homepage: info from the current directory, if present
-
-<aside class="success">
-Please note that the node application is not the only way that could be used, for example you can use <a href="http://koala-app.com/">Koala</a> to compile SASS.
-</aside>
+  
+  - You will see grunt watch is already active by running above commands, so every time you change SASS or LESS files, Grunt watch detects it and autocompiles it to CSS
 
 
 ## LESS
@@ -2234,3 +2215,24 @@ Karak Dashboard include invoice view with save and print feature.
 * All you have to do to use this feature is to include the Karak dashboard style file and copy the source code to your HTML page.
 
 <img src="images/invoice.png">
+
+# RTL (Right to Left)
+
+```html
+
+<!-- RTL CSS -->
+<link type="text/css" href="assets/css/style-rtl.css" rel="stylesheet" />
+
+```
+
+Karak Dashboard suuports the RTL (Right to Left) text direction feature.
+
+* Use RTL for languages written from right to left (like Hebrew or Arabic)
+* All pages mentioned above supports this text direction feature.
+* All you have to do to use this feature is to include the Karak dashboard RTL style file and copy the source code to your HTML page.
+
+<img src="images/rtl.png">
+
+
+
+
